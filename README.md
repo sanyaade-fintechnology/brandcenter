@@ -1,3 +1,4 @@
-## SumUp Status Hub
+# SumUp Status Page
 
-this page is intended to show the availability status of all SumUp systems.
+This is the repository for the sumup status page, accessible from
+status.sumup.com

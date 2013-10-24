@@ -1,0 +1,8 @@
+{
+  "updated_at": 1382611916000,
+  "services" : {
+    "transactions": "online",
+    "signups": "online",
+    "login": "offline"
+  }
+}
