@@ -1,6 +1,6 @@
 {
-  "updated_at": 1382611916000,
-  "services" : {
+  "updated_at": 1382697486000,
+  "services": {
     "transactions": {
       "status": "problems",
       "details": "We are experiencing problems with processing ELV cards."
@@ -10,8 +10,8 @@
       "details": "Signups are offline for 15 minutes due to a deployment."
     },
     "login": {
-      "status": "online",
-      "details": "You can login."
+      "status": "offline",
+      "details": "SumUp is in maintenance mode, please check back in 10 minutes."
     }
   }
 }
