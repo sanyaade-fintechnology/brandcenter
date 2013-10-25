@@ -71,14 +71,33 @@ header {
 .overall-status-bar {
   @include row;
   border-radius: $layoutCornerRadius;
+  background-color: $colorLightGrey;
 
+
+  /* States */
   &.online {
     background-color: $colorSuccess;
-    color: $colorSuccessDarker;
+    color: shade($colorSuccessDarker, 30%);
 
     @include media($breakTabletPortrait) { border-bottom: 1px solid $colorSuccessDarker }
   }
 
+  &.problems {
+    background-color: $colorWarning;
+    color: shade($colorWarningDarker, 30%);
+
+    @include media($breakTabletPortrait) { border-bottom: 1px solid $colorWarningDarker }
+  }
+
+  &.offline {
+    background-color: $colorError;
+    color: shade($colorErrorDarker, 30%);
+
+    @include media($breakTabletPortrait) { border-bottom: 1px solid $colorErrorDarker }
+  }
+
+
+  /* Elements */
   .message,
   .updated-at {
     @include span-columns(9);
@@ -88,9 +107,7 @@ header {
   }
 
   .message {
-    color: shade($colorSuccessDarker, 30%);
     font-size: 1.2em;
-    border-bottom: 1px solid $colorSuccessDarker;
 
     @include media($breakTabletPortrait) {
       @include span-columns(5 of 9);
@@ -109,14 +126,8 @@ header {
     }
 
     .label {
-      // display: block;
       font-size: .9em;
       text-transform: uppercase;
-    }
-
-    .date,
-    .time {
-      color: shade($colorSuccessDarker, 30%);
     }
 
     .date {
