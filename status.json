@@ -1,5 +1,9 @@
 {
   "updated_at": 1382697486000,
+  "overall": {
+    "status": "problems",
+    "details": "We're currently experiencing a few glitches"
+  },
   "services": {
     "transactions": {
       "status": "problems",
@@ -10,8 +14,8 @@
       "details": "Signups are offline for 15 minutes due to a deployment."
     },
     "login": {
-      "status": "offline",
-      "details": "SumUp is in maintenance mode, please check back in 10 minutes."
+      "status": "online",
+      "details": ""
     }
   }
 }
