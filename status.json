@@ -1,17 +1,17 @@
 {
-  "updated_at": 1382697486000,
+  "updated_at": 1382709146000,
   "overall": {
-    "status": "problems",
-    "details": "We're currently experiencing a few glitches"
+    "status": "online",
+    "details": "All systems are up and running."
   },
   "services": {
     "transactions": {
-      "status": "problems",
-      "details": "We are experiencing problems with processing ELV cards."
+      "status": "online",
+      "details": ""
     },
     "signups": {
-      "status": "offline",
-      "details": "Signups are offline for 15 minutes due to a deployment."
+      "status": "online",
+      "details": ""
     },
     "login": {
       "status": "online",
