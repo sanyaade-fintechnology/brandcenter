@@ -1,0 +1,35 @@
+//-------------------------------------
+// Vendor Dependencies
+//-------------------------------------
+@import "bourbon/bourbon";
+@import "neat/neat-helpers";
+@import "global/_grid_settings.css.scss";
+@import "neat/neat";
+
+
+//-------------------------------------
+// Fonts
+//-------------------------------------
+
+@include font-face(museo, "../fonts/western-latin/MuseoSans_300-webfont", 300);
+@include font-face(museo, "../fonts/western-latin/MuseoSans_300_Italic-webfont", 300, italic);
+@include font-face(museo, "../fonts/western-latin/MuseoSans_500-webfont", 500);
+@include font-face(museo-rounded, "../fonts/western-latin/MuseoSansRounded-100-webfont", 100);
+@include font-face(sumup-icons, "../fonts/icons/sumup-icons", normal, normal);
+
+
+//-------------------------------------
+// SumUp global styles
+//-------------------------------------
+@import "global/_variables.css.scss";
+@import "global/_animate.css.scss";
+@import "global/_typography.css.scss";
+@import "global/_elements.css.scss";
+@import "global/_helpers.css.scss";
+@import "global/_tables.css.scss";
+@import "global/_forms.css.scss";
+@import "global/_buttons.css.scss";
+@import "global/_icons.css.scss";
+
+
+@import "page";
