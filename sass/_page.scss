@@ -10,14 +10,6 @@ $grid-columns: 9;
 // Header
 //-------------------------------------
 
-.logo {
-  @include retina-image("../images/logo/sumup_logo_grey", 161px 42px, "png");
-  width: 161px;
-  height: 42px;
-  text-indent: -999px;
-  display: block;
-}
-
 .page {
   @include outer-container;
 }
@@ -62,6 +54,13 @@ header {
     @include media($breakTabletPortrait) {
       margin-bottom: 0;
     }
+  }
+
+  .logo {
+    @include retina-image("../images/logo/sumup_logo_grey", 161px 42px, "png");
+    width: 161px;
+    height: 42px;
+    text-indent: -999px;
   }
 }
 
@@ -144,6 +143,8 @@ header {
     border-bottom: 1px solid $colorBorderLight;
     padding-bottom: $layoutPagePadding/2;
 
+    &:last-of-type { border-bottom: none }
+
     @include media($breakTabletLandscape) {
       @include span-columns(3 of 9);
       border-bottom: none;
@@ -190,5 +191,51 @@ header {
   .status-message {
     font-size: em(12);
     line-height: 1.4;
+  }
+}
+
+//-------------------------------------
+// Footer
+//-------------------------------------
+
+footer {
+  @include row;
+  @extend %margin-top-large;
+  padding: $layoutPagePadding;
+  border-top-left-radius: $layoutCornerRadius;
+  border-top-right-radius: $layoutCornerRadius;
+  background-color: $colorDarkGrey;
+  color: $colorOffWhite;
+  // font-size: em(12);
+
+  p {
+    @extend %no-margin;
+    @include span-columns(9);
+    @extend %margin-top-medium;
+  }
+
+  h4 {
+    color: $colorOffWhite;
+
+    @include media($breakTabletLandscape) {
+      margin-top: 0;
+    }
+  }
+
+  &, a { color: lighten($colorDarkGrey, 20%) }
+
+  a {
+    text-decoration: none;
+
+    &:hover { color: lighten($colorDarkGrey, 30%) }
+  }
+
+  nav {
+    @include span-columns(9);
+
+    @include media($breakTabletPortrait) {
+      @include span-columns(3 of 9);
+      @include omega(3n);
+    }
   }
 }
