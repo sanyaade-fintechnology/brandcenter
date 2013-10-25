@@ -1,3 +1,15 @@
+//-------------------------------------
+// Grid Settings
+//-------------------------------------
+
+$max-width: 800px;
+$grid-columns: 9;
+
+
+//-------------------------------------
+// Header
+//-------------------------------------
+
 .logo {
   @include retina-image("../images/logo/sumup_logo_grey", 161px 42px, "png");
   width: 161px;
@@ -6,18 +18,19 @@
   display: block;
 }
 
-$max-width: 800px;
-
 .page {
   @include outer-container;
 }
 
 header {
-  @include retina-image("../images/header-bg", 800px 500px, "jpg");
+  @include retina-image("../images/header-bg", null null, "jpg");
   @extend %margin-bottom-medium;
+  background-size: cover;
+  background-position: center center;
   border-bottom-left-radius: $layoutCornerRadius;
   border-bottom-right-radius: $layoutCornerRadius;
-  height: 500px;
+  height: 0;
+  padding-top: 62.5%;
   position: relative;
 
   .header-wrap {
@@ -30,41 +43,72 @@ header {
   h1 {
     @extend %no-margin;
     color: $colorOffWhite;
-    padding: .8em .4em;
-    border-left: 1px solid $colorCorpHighlight;
-    margin-left: .4em;
     text-transform: uppercase;
     font-size: 1.8em;
     text-shadow: 1px 1px 0 rgba(black, .2);
+
+    @include media($breakTabletPortrait) {
+      padding: .8em .4em;
+      border-left: 1px solid $colorCorpHighlight;
+      margin-left: .4em;
+    }
   }
 
   h1,
   .logo {
     @extend %inline;
+    @extend %margin-bottom-medium;
+
+    @include media($breakTabletPortrait) {
+      margin-bottom: 0;
+    }
   }
 }
+
+//-------------------------------------
+// Status Bar
+//-------------------------------------
 
 .overall-status-bar {
   @include row;
   border-radius: $layoutCornerRadius;
+  @extend %margin-bottom-medium;
 
   &.online {
     background-color: $colorSuccess;
     color: $colorSuccessDarker;
+
+    @include media($breakTabletPortrait) { border-bottom: 1px solid $colorSuccessDarker }
+  }
+
+  .message,
+  .updated-at {
+    @include span-columns(9);
+    padding: $layoutPagePadding/2 $layoutPagePadding;
+
+    @include media($breakTabletPortrait) { padding: $layoutPagePadding }
   }
 
   .message {
-    @include span-columns(7);
     color: shade($colorSuccessDarker, 30%);
-    padding: $layoutPagePadding;
     font-size: 1.2em;
+    border-bottom: 1px solid $colorSuccessDarker;
+
+    @include media($breakTabletPortrait) {
+      @include span-columns(5 of 9);
+      border-bottom: none;
+    }
   }
 
   .updated-at {
-    @include span-columns(5);
+    @include span-columns(9);
     font-size: em(12);
-    text-align: right;
-    padding: $layoutPagePadding;
+    border-bottom: none;
+
+    @include media($breakTabletPortrait) {
+      @include span-columns(4 of 9);
+      text-align: right;
+    }
 
     .label {
       // display: block;
@@ -79,6 +123,61 @@ header {
 
     .date {
       font-weight: 500;
+    }
+  }
+}
+
+//-------------------------------------
+// Services
+//-------------------------------------
+
+
+.main-content {
+  @include row;
+
+  .service {
+    padding: $layoutPagePadding;
+    @extend %margin-bottom-small;
+
+    @include media($breakTabletLandscape) {
+      @include span-columns(3 of 9);
+    }
+
+    h3 {
+      @extend %no-margin-top;
+
+      &, &:before { vertical-align: top }
+
+      &:before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        border-radius: $layoutCornerRadius;
+        border: 1px solid;
+        display: inline-block;
+        margin-right: 0.5em;
+      }
+    }
+
+    &.online {
+      h3:before {
+        border-color: $colorSuccessDarker;
+        background-color: $colorSuccess;
+      }
+    }
+
+    &.problems {
+      h3:before {
+        border-color: $colorWarningDarker;
+        background-color: $colorWarning;
+      }
+    }
+
+    &.offline {
+      h3:before {
+        border-color: $colorErrorDarker;
+        background-color: $colorError;
+      }
     }
   }
 }
