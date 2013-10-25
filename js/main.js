@@ -1,6 +1,6 @@
 function setServiceStatus(service, status){
   $("#"+service).addClass(status["status"]);
-  $(service).find('.status-message').html(status["details"])
+  $("#"+service).find('.status-message').html(status["details"])
 }
 
 $.ajax({
