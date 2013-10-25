@@ -6,6 +6,79 @@
   display: block;
 }
 
-.page {
+$max-width: 800px;
 
+.page {
+  @include outer-container;
+}
+
+header {
+  @include retina-image("../images/header-bg", 800px 500px, "jpg");
+  @extend %margin-bottom-medium;
+  border-bottom-left-radius: $layoutCornerRadius;
+  border-bottom-right-radius: $layoutCornerRadius;
+  height: 500px;
+  position: relative;
+
+  .header-wrap {
+    position: absolute;
+    left: $layoutPagePadding;
+    right: $layoutPagePadding;
+    bottom: 0;
+  }
+
+  h1 {
+    @extend %no-margin;
+    color: $colorOffWhite;
+    padding: .8em .4em;
+    border-left: 1px solid $colorCorpHighlight;
+    margin-left: .4em;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 0 rgba(black, .2);
+  }
+
+  h1,
+  .logo {
+    @extend %inline;
+  }
+}
+
+.overall-status-bar {
+  @include row;
+  border-radius: $layoutCornerRadius;
+
+  &.online {
+    background-color: $colorSuccess;
+    color: $colorSuccessDarker;
+  }
+
+  .message {
+    @include span-columns(7);
+    color: shade($colorSuccessDarker, 30%);
+    padding: $layoutPagePadding;
+    font-size: 1.2em;
+  }
+
+  .updated-at {
+    @include span-columns(5);
+    font-size: em(12);
+    text-align: right;
+    padding: $layoutPagePadding;
+
+    .label {
+      // display: block;
+      font-size: .9em;
+      text-transform: uppercase;
+    }
+
+    .date,
+    .time {
+      color: shade($colorSuccessDarker, 30%);
+    }
+
+    .date {
+      font-weight: 500;
+    }
+  }
 }
