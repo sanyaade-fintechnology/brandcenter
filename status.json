@@ -1,6 +1,10 @@
 {
-  "updated_at": 1382611916000,
-  "services" : {
+  "updated_at": 1382697486000,
+  "overall": {
+    "status": "problems",
+    "details": "We're currently experiencing a few glitches"
+  },
+  "services": {
     "transactions": {
       "status": "problems",
       "details": "We are experiencing problems with processing ELV cards."
@@ -11,7 +15,7 @@
     },
     "login": {
       "status": "online",
-      "details": "You can login."
+      "details": ""
     }
   }
 }
