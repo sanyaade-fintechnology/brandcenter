@@ -1,3 +1,11 @@
-body {
+.logo {
+  @include retina-image("../images/logo/sumup_logo_grey", 161px 42px, "png");
+  width: 161px;
+  height: 42px;
+  text-indent: -999px;
+  display: block;
+}
+
+.page {
 
 }
