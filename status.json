@@ -1,8 +1,17 @@
 {
   "updated_at": 1382611916000,
   "services" : {
-    "transactions": "online",
-    "signups": "online",
-    "login": "offline"
+    "transactions": {
+      "status": "problems",
+      "details": "We are experiencing problems with processing ELV cards."
+    },
+    "signups": {
+      "status": "offline",
+      "details": "Signups are offline for 15 minutes due to a deployment."
+    },
+    "login": {
+      "status": "online",
+      "details": "You can login."
+    }
   }
 }
