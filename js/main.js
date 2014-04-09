@@ -9,7 +9,7 @@ function setMainStatus(overall){
 }
 
 $.ajax({
-  url: 'status.json',
+  url: '/status.json',
   dataType: "json",
   success: function (data) {
     // Set the last update date and time
