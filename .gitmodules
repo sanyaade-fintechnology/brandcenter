@@ -1,6 +1,0 @@
-[submodule "sass/global"]
-	path = sass/global
-	url = git@github.com:sumup/global-stylesheets.git
-[submodule "fonts"]
-	path = fonts
-	url = git@github.com:sumup/global-fonts.git
