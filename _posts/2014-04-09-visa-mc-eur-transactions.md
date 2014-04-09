@@ -2,7 +2,7 @@
 layout: default
 title:  "VISA/MC EUR Transactions disruption for a few minutes"
 date:   2014-04-01 13:36:12
-categories: incident transactions
+categories: incident
 ---
 
 __What__: Disruption to VISA/MC EUR Transactions
