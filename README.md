@@ -47,9 +47,16 @@ Edit the __status.json__ file, manually
 | problems | We're currently experiencing a few glitches.
 | offline | Systems offline. Our engineers are on it. Please hang on.
 
-## Cron setup
+## Add Incident Report
 
-We need to add this cronjob entry:
+Use the `incident_draft.md` as a template
 
-    */29 * * * *  ruby scripts/sumup_supervisor.rb
+    cp _drafts/incident_draft.md _posts/YYYT-MM-DD-title-of-report.md
 
+Edit the new post and when ready add the new file and push it to GitHub
+
+    git add _posts/YYYT-MM-DD-title-of-report.md
+    git ci -m "<Added incident report ...>"
+    git push origin HEAD
+
+Go to [](http://sumup.github.io) to view the added report.
