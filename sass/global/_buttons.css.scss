@@ -1,0 +1,217 @@
+//-------------------------------------
+// Button Definitions
+//-------------------------------------
+
+.button-set {
+  a, button {
+    @extend %inline;
+  }
+}
+
+.button {
+  @include transition (background-color .2s);
+  text-shadow: 0 1px 0px rgba(black, .2) ;
+  // text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  border-radius: $layoutCornerRadius;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $colorCorpHighlightDarker;
+  padding: 0.8em 1em;
+  background-color: $colorCorpHighlight;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+  font-family: $fontFamilyDisplay;
+  line-height: 1em;
+
+  &:hover {
+    color: white;
+    background-color: $colorCorpHighlightLighter;
+  }
+
+  &.grey {
+    color: $colorDarkGrey;
+    background-color: $colorLightGrey;
+    border-bottom-color: $colorBorderLight;
+    text-shadow: none;
+
+    &:hover {
+      background-color: lighten($colorLightGrey, 5%);
+    }
+  }
+
+  &.dark {
+    color: $colorOffWhite;
+    background-color: $colorDarkGrey;
+    border-bottom-color: $colorBorderDark;
+    text-shadow: none;
+
+    &:hover {
+      background-color: lighten($colorDarkGrey, 5%);
+    }
+  }
+
+  &.white {
+    color: $colorDarkGrey;
+    background-color: $colorOffWhite;
+    border-bottom-color: $colorBorderLight;
+    text-shadow: none;
+  }
+
+  &.facebook {
+    &:hover {
+      background-color: #3B5998;
+      border-bottom-color: lighten(#3B5998, 10%);
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: $colorBorderLight;
+  }
+
+  /* sizes */
+
+  &.small {
+    font-size: em(13, 16);
+    padding: .5em .9em;
+  }
+
+  &.medium {
+    font-size: 1.1em;
+  }
+
+  &.call-to-action {
+    @include media($breakTabletPortrait) {
+      padding: 0.6em 1em;
+      font-size: 1.2em;
+      min-width: 250px;
+    }
+
+    &.with-icon {
+      padding-left: 2em;
+
+      .icon { margin-right: 3px }
+    }
+  }
+
+  /* states */
+
+  &.disabled {
+    opacity: .5;
+    cursor: default;
+  }
+
+  //-------------------------------------
+  // make sure to include 'spinner.svg' in the respective assets directory
+  //
+  // markup:
+  // <button class="has-loading-indicator loading button" type="submit">
+  //   <span class="spinner"></span>
+  //   <span class="label">Login</span>
+  // </button>
+  //-------------------------------------
+
+  &.has-loading-indicator {
+    @include transition(all .3s ease-in-out);
+    overflow: hidden;
+    position: relative;
+
+    .label,
+    .spinner {
+      @include transition(all .3s .2s ease-in-out);
+      display: inline-block;
+    }
+
+    .label {
+      position: relative;
+      top: 0;
+    }
+
+    .spinner {
+      content: "";
+      background-image: url('/assets/images/spinner.svg');
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: -2em;
+      left: 50%;
+      margin: -9px 0 0 -9px;
+    }
+
+    &.loading {
+      background-color: $colorLightGrey;
+      border-color: darken($colorLightGrey, 10%);
+
+      .label { top: 2em }
+
+      .spinner { top: 50% }
+    }
+  }
+}
+
+.pill-button {
+  @include transition(all .2s);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .7em;
+  padding: .2em 1em;
+  line-height: 1em;
+  background-color: $colorLightGrey;
+  color: $colorDarkGrey;
+  border-radius: 999px;
+
+
+  &:hover {
+    background-color: lighten($colorLightGrey, 5%);
+  }
+}
+
+.read-more {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8em;
+  font-style: normal;
+}
+
+
+.facebook-widget {
+  .button,
+  .like-count {
+    @extend %inline;
+    position: relative;
+    height: 23px;
+  }
+
+  .button {
+    z-index: 2;
+  }
+
+  .like-count {
+    opacity: 0;
+    z-index: 1;
+    font-size: em(10, 14);
+    // display: inline-block;
+    border: 1px solid;
+    border-color: lighten($colorDarkGrey, 40%);
+    border-left: none;
+    border-radius: 0 $layoutCornerRadius $layoutCornerRadius 0;
+    background-color: rgba($colorOffWhite, .8);
+    font-weight: 500;
+    padding: 0 .7em;
+    line-height: 21px;
+    // color: lighten($colorDarkGrey, 20%);
+    margin-left: -(em(8));
+
+    &.loaded {
+      @include animation(fadeInLeft .3s 0s ease-out forwards)
+    }
+  }
+}
