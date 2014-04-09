@@ -59,4 +59,4 @@ Edit the new post and when ready add the new file and push it to GitHub
     git ci -m "<Added incident report ...>"
     git push origin HEAD
 
-Go to [](http://sumup.github.io) to view the added report.
+Go to [http://sumup.github.io](http://sumup.github.io) to view the added report.
