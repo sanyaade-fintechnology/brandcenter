@@ -33,7 +33,7 @@ Edit the __status.json__ file, manually
 
 | key        | description              | allowed values |
 |------------|--------------------------|----------------|
-| updated_at | timestamp in miliseconds | |
+| updated_at | timestamp in miliseconds | Unix timestamp * 1000. Go to [http://www.convert-unix-time.com](http://www.convert-unix-time.com), copy the timestamp and add three 0s at the end |
 | overall    | overall status of the system | |
 | status     | target status | online, offline, problems |
 | details    | An explination for the status | |
@@ -60,3 +60,5 @@ Edit the new post and when ready add the new file and push it to GitHub
     git push origin HEAD
 
 Go to [http://sumup.github.io](http://sumup.github.io) to view the added report.
+
+You can also use the GitHub web interface for this.
