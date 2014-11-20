@@ -1,0 +1,65 @@
+//-------------------------------------
+// Layout specific rules
+//-------------------------------------
+
+.grid-container {
+  @include outer-container;
+  @include pad($layoutPagePadding);
+
+  &.no-pad {
+    @include pad(0);
+  }
+
+  @include media($breakTabletPortrait) { @include pad($layoutPagePadding * 2) }
+}
+
+/* Main navigation */
+
+header {
+  @include row;
+  padding-top: $layoutPagePadding/2 !important;
+  padding-bottom: $layoutPagePadding/2 !important;
+
+  @include media($breakDesktop) {
+    @include animation(fadeInDown .3s .5s ease-in backwards);
+    position: absolute;
+    top: $layoutPagePadding;
+    left: 50%;
+    margin-left: -512px !important;
+    background-color: white;
+    border-radius: $layoutCornerRadius;
+    width: 100%;
+    box-shadow: 0 2px 0 rgba(darken($colorCorpHighlight, 20%), .3);
+  }
+}
+
+.logo {
+  background-image: url('/images/logo/sumup_logo_grey.svg');
+  background-size: 161px 42px;
+  width: 161px;
+  height: 42px;
+  text-indent: -999px;
+  display: block;
+  float: left;
+}
+
+.main-navigation {
+  float: right;
+  padding: em(8) 0;
+
+  li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+  .button.outline {
+    color: $colorDarkGrey;
+    text-shadow: none;
+
+    &:hover {
+      background-color: $colorCorpHighlight;
+      border-color: $colorCorpHighlight;
+      color: $colorOffWhite;
+    }
+  }
+}

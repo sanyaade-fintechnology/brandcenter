@@ -1,0 +1,33 @@
+//-------------------------------------
+// Logo usage
+//-------------------------------------
+
+.logo-usages {
+  @include row();
+
+  .figure-wrap {
+    @include span-columns(12);
+
+    @include media($breakTabletPortrait) {
+      @include span-columns(6);
+    }
+  }
+
+  figure {
+    @extend %no-margin;
+    text-align: center;
+    border-radius: $layoutCornerRadius;
+  }
+
+  img {
+    width: 60%;
+    margin: 12% 0;
+
+    @include media($breakTabletPortrait) {
+      width: 50%;
+    }
+  }
+
+  .logo-on-white { background-color: $colorOffWhite }
+  .logo-on-blue { background-color: $colorCorpHighlight }
+}

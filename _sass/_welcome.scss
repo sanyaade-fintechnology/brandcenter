@@ -1,0 +1,75 @@
+//-------------------------------------
+// Welcome section
+//-------------------------------------
+
+.welcome {
+  background-color: $colorCorpHighlight;
+  background-image: url('/images/logo-construction-repeated.svg');
+  background-size: cover;
+  color: $colorOffWhite;
+  padding: em(40) 0;
+
+  @include media($breakDesktop) {
+    padding: em(150) 0 em(50) 0;
+  }
+
+  h1 { @extend %no-margin-top }
+
+
+}
+
+.welcome-text {
+  @include animation(fadeInDown .3s 1s ease-in backwards);
+
+  h1 {
+    margin-left: -(em(1));
+
+    @include media($breakTabletLandscape) { font-size: 5em }
+  }
+
+  h1, p {
+    text-shadow: 0 2px 0 rgba(darken($colorCorpHighlight, 20%), .3);
+  }
+
+  p {
+    @include media($breakTabletLandscape) { max-width: 40% }
+  }
+}
+
+.section-warpholes {
+  margin-top: em(80);
+
+  small {
+    @include animation(fadeIn .3s 2s ease-in backwards);
+    @extend %margin-bottom-small;
+    color: $colorDarkGrey;
+    text-shadow: 0 1px 0 rgba(darken($colorCorpHighlight, 20%), .3);
+  }
+
+  li {
+    @include media($breakTabletLandscape) {
+      display: inline-block;
+    }
+
+    &:nth-child(1) a { @include animation(fadeInDown .3s 1.4s ease-in backwards) }
+    &:nth-child(2) a { @include animation(fadeInDown .3s 1.6s ease-in backwards) }
+    &:nth-child(3) a { @include animation(fadeInDown .3s 1.8s ease-in backwards) }
+  }
+
+  a {
+    color: $colorOffWhite;
+    display: block;
+
+    @include media($breakTabletLandscape) {
+      padding: em(30) em(50);
+      margin-right: em(20);
+      text-decoration: none;
+      border: 1px solid;
+      border-radius: $layoutCornerRadius;
+
+      &:hover {
+        background-color: rgba(white, .2);
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+//-------------------------------------
+// Color guidelines
+//-------------------------------------
+
+.color-guidelines {
+
+}
+
+.color-tiles {
+  & > li {
+    @include span-columns(12);
+
+    @include media($breakTabletPortrait) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($breakTabletLandscape) {
+      @include span-columns(3);
+      @include omega-reset(2n);
+      @include omega(4n);
+    }
+  }
+
+  .color-sample {
+    @extend %margin-bottom-small;
+    padding-top: 20%;
+    border-radius: $layoutCornerRadius;
+    background-color: $colorLightGrey;
+
+    @include media($breakTabletLandscape) { padding-top: 40% }
+  }
+
+  .blue .color-sample { background-color: $colorCorpHighlight }
+  .darkgrey .color-sample { background-color: $colorDarkGrey }
+  .lightgrey .color-sample { background-color: $colorLightGrey }
+  .offwhite .color-sample { background-color: $colorOffWhite }
+  .signal-green .color-sample { background-color: $colorSuccess }
+  .signal-orange .color-sample { background-color: $colorWarning }
+  .signal-red .color-sample { background-color: $colorError }
+
+  .definitions {
+    li {
+      border-bottom: 1px solid $colorLightGrey;
+    }
+
+    .label {
+      display: inline-block;
+      width: em(90);
+      font-weight: 500;
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
+
+    .value {
+      font-family: "Lucida Console", Monaco, monospace;
+      font-size: em(14);
+    }
+  }
+
+  .ase-download {
+    a {
+      @include row();
+      padding: 1em;
+      background-color: $colorOffWhite;
+      border: 1px solid $colorLightGrey;
+      border-radius: $layoutCornerRadius;
+    }
+
+    img, p { @include span-columns(6) }
+
+    p {
+      @include transition(all .15s);
+      @extend %no-margin;
+      font-size: em(11);
+      text-transform: uppercase;
+      line-height: 1.2;
+      font-weight: 500;
+      padding: 5%;
+      background-color: white;
+      border-radius: $layoutCornerRadius;
+      text-align: center;
+    }
+
+    .icon-cloud-download {
+      @include transition(all .15s);
+      @include transform(translateY(5px));
+      font-size: em(50, 11);
+      display: inline-block;
+      color: $colorLightGrey;
+    }
+
+    &:hover p {
+      background-color: $colorSuccess;
+      color: $colorSuccess;
+
+      .icon-cloud-download {
+        @include transform(translateY(-10px));
+        color: $colorOffWhite;
+      }
+    }
+  }
+}

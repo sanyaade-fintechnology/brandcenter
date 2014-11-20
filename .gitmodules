@@ -1,3 +1,0 @@
-[submodule "sass/global"]
-	path = sass/global
-	url = git@github.com:sumup/global-stylesheets.git
