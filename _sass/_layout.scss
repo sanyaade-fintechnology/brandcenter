@@ -13,6 +13,11 @@
   @include media($breakTabletPortrait) { @include pad($layoutPagePadding * 2) }
 }
 
+h4 {
+  color: $colorDarkGrey;
+  margin-top: 0;
+}
+
 /* Main navigation */
 
 header {
@@ -62,4 +67,8 @@ header {
       color: $colorOffWhite;
     }
   }
+}
+
+.section-header {
+  padding-bottom: 0;
 }
