@@ -2,6 +2,40 @@
 // Logo usage
 //-------------------------------------
 
+span.incorrect {
+  color: $colorErrorDarker;
+}
+
+figure.incorrect {
+  position: relative;
+  background-color: $colorOffWhite;
+
+  &:before,
+  &:after {
+    @include transform-origin(center center);
+    content: "";
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $colorError;
+    position: absolute;
+    top: 49.5%;
+    left: 10%;
+  }
+
+  &:before {
+    @include transform(rotate(30deg));
+  }
+
+  &:after {
+    @include transform(rotate(-30deg));
+  }
+}
+
+figcaption.incorrect {
+  strong { color: $colorErrorDarker }
+}
+
 .logo-usages {
   @include row();
 
@@ -16,7 +50,14 @@
   figure {
     @extend %no-margin;
     text-align: center;
-    border-radius: $layoutCornerRadius;
+    border-radius: $layoutCornerRadius $layoutCornerRadius $layoutCornerRadius 0;
+  }
+
+  figcaption {
+    font-size: em(11);
+    text-transform: uppercase;
+    padding-top: em(4);
+    line-height: 1;
   }
 
   img {

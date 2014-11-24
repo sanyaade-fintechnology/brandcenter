@@ -18,6 +18,8 @@ h4 {
   margin-top: 0;
 }
 
+.section-header { padding-bottom: 0 }
+
 /* Main navigation */
 
 header {
@@ -69,6 +71,16 @@ header {
   }
 }
 
-.section-header {
-  padding-bottom: 0;
+//-------------------------------------
+// Footer
+//-------------------------------------
+
+footer {
+  background: url('/images/background.svg') no-repeat center center;
+  background-size: cover;
+  min-height: 100px;
+
+  a {
+    color: white;
+  }
 }
