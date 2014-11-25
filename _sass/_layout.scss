@@ -13,6 +13,13 @@
   @include media($breakTabletPortrait) { @include pad($layoutPagePadding * 2) }
 }
 
+h4 {
+  color: $colorDarkGrey;
+  margin-top: 0;
+}
+
+.section-header { padding-bottom: 0 }
+
 /* Main navigation */
 
 header {
