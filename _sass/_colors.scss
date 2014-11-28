@@ -3,7 +3,7 @@
 //-------------------------------------
 
 .color-guidelines {
-
+  @include row();
 }
 
 .color-tiles {

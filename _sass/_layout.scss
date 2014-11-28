@@ -13,6 +13,10 @@
   @include media($breakTabletPortrait) { @include pad($layoutPagePadding * 2) }
 }
 
+.style-guide-article>section {
+  padding-bottom: em(30);
+}
+
 /* Main navigation */
 
 header {
