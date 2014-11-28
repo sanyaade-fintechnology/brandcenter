@@ -14,21 +14,21 @@ figure.incorrect {
   &:after {
     @include transform-origin(center center);
     content: "";
-    width: 80%;
+    width: 70%;
     height: 3px;
     border-radius: 10px;
     background-color: $colorError;
     position: absolute;
     top: 49.5%;
-    left: 10%;
+    left: 15%;
   }
 
   &:before {
-    @include transform(rotate(30deg));
+    @include transform(rotate(18deg));
   }
 
   &:after {
-    @include transform(rotate(-30deg));
+    @include transform(rotate(-18deg));
   }
 }
 
@@ -51,6 +51,10 @@ figcaption.incorrect {
     @extend %no-margin;
     text-align: center;
     border-radius: $layoutCornerRadius $layoutCornerRadius $layoutCornerRadius 0;
+
+    &.incorrect img {
+      margin: 6% 0;
+    }
   }
 
   figcaption {
@@ -63,6 +67,7 @@ figcaption.incorrect {
   img {
     width: 60%;
     margin: 12% 0;
+    max-height: 100px;
 
     @include media($breakTabletPortrait) {
       width: 50%;
