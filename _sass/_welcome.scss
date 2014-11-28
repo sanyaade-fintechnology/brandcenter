@@ -10,12 +10,10 @@
   padding: em(40) 0;
 
   @include media($breakDesktop) {
-    padding: em(150) 0 em(50) 0;
+    padding: em(100) 0 em(50) 0;
   }
 
   h1 { @extend %no-margin-top }
-
-
 }
 
 .welcome-text {
@@ -37,7 +35,7 @@
 }
 
 .section-warpholes {
-  margin-top: em(80);
+  margin-top: em(50);
 
   small {
     @include animation(fadeIn .3s 2s ease-in backwards);

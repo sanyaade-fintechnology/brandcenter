@@ -13,26 +13,14 @@
     }
   }
 
-  h4 {
-  	display: inline-block;
-  	font-weight: 500;
-  	position: relative;
-  	padding-right: 1.5em;
-
-	  &:before {
-	  	@include size(1em);
-	  	position: absolute;
-	  	right: 0;
-	  	top: 0;
-	  	content: '';
-	  	display: block;
-	  	background: url('/images/download.svg') no-repeat center center;
-	  	background-size: contain;
-	  }
-	}
-
-	p {
-		max-width: 15em;
-		margin-bottom: 1em;
-	}
+  .button {
+    &:before {
+      @include size(1em);
+      margin-right: 4px;
+      content: '';
+      display: inline-block;
+      background: url('/images/download.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
 }
