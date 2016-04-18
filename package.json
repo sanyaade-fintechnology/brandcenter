@@ -1,0 +1,25 @@
+{
+  "name": "sumup.github.io",
+  "version": "0.0.2",
+  "description": "SumUp's styleguide and brand guidelines",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumup/sumup.github.io.git"
+  },
+  "author": "Nils Borchers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumup/sumup.github.io/issues"
+  },
+  "homepage": "https://github.com/sumup/sumup.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
+    "lodash": "^4.11.1"
+  }
+}
