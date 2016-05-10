@@ -6,7 +6,7 @@
 //-------------------------------------
 @import "bourbon/bourbon";
 @import "neat/neat-helpers";
-@import "global/_grid_settings.css.scss";
+@import "global/_v2_grid_settings";
 @import "neat/neat";
 
 
@@ -25,15 +25,14 @@
 //-------------------------------------
 // SumUp global styles
 //-------------------------------------
-@import "global/_variables.css.scss";
-@import "global/_animate.css.scss";
-@import "global/_typography.css.scss";
-@import "global/_elements.css.scss";
-@import "global/_helpers.css.scss";
-@import "global/_tables.css.scss";
-@import "global/_forms.css.scss";
-@import "global/_buttons.css.scss";
-@import "global/_icons.css.scss";
+@import "global/_v2_colors";
+@import "global/_v2_animate";
+@import "global/_v2_typography";
+@import "global/_v2_elements";
+@import "global/_v2_helpers";
+@import "global/_v2_tables";
+@import "global/_v2_forms";
+@import "global/_v2_buttons";
 
 
 //-------------------------------------

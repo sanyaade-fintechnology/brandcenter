@@ -17,4 +17,16 @@ gulp.task('serve', function () {
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
+gulp.task("watch", function () {
+  gulp.watch([
+    "src/**/*.md",
+    "src/**/*.html",
+    "src/**/*.xml",
+    "src/**/*.txt",
+    "src/**/*.js"
+  ], ["jekyll-rebuild"]);
+  // gulp.watch(["serve/assets/stylesheets/*.css"], reload);
+  gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
+});
+
 gulp.task('default', ['build', 'serve']);
