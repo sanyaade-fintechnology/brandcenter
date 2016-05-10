@@ -1,0 +1,222 @@
+// Overall styles for buttons. By default they fill in their parent's width, but go inline for tablets and up. Please keep the class order.
+//
+// .button                       - Default solid button, with blue background
+// .button.dark                  - Solid button, with dark grey background
+// .button.grey                  - Solid button, with light grey background
+// .button.bright                - Solid button, with white background
+// .button.green                 - Solid button, with green background
+// .button.outline               - Outline button, with blue border
+// .button.dark.outline          - Outline button, with dark grey border
+// .button.bright.outline        - Outline button, with white grey border
+// .button.small                 - Smaller buttons
+// .button.pill                  - Smaller, pill-styled outline buttons
+//
+// Styleguide 1.0.
+
+.button-set {
+  @include clearfix;
+  @extend %margin-top-medium;
+
+  p {
+    display: inline-block;
+    font-size: .8em;
+  }
+
+  li {
+    @include media($breakTabletLandscape) { display: inline-block }
+  }
+
+  .button {
+    margin: 1em 0;
+    &:last-of-type { margin-right: 0 }
+
+    @include media($breakTabletLandscape) { margin: 0 }
+  }
+}
+
+%outline-button {
+  background: transparent;
+  border-radius: $layoutCornerRadius;
+  border-style: solid;
+  border-width: 1px;
+  font-weight: 300;
+  text-shadow: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+    background: rgba(black, .1);
+  }
+}
+
+.button {
+  @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+  @include truncate('100%');
+  border-radius: $layoutCornerRadius;
+  position: relative;
+  display: block;
+  text-shadow: 0 1px 0px rgba(black, .2);
+  font-weight: 500;
+  font-family: $fontFamilyDisplay;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  padding: 1.1em 1.6em;
+  background: $colorCorpHighlight;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+    background: darken($colorCorpHighlight, 5%);
+  }
+
+  &.outline {
+    @extend %outline-button;
+    border-color: $colorCorpHighlight;
+    color: $colorCorpHighlight;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+      background: $colorCorpHighlight;
+      color: white;
+    }
+  }
+
+  @include media($breakTabletLandscape) {
+    display: inline-block;
+    width: auto;
+  }
+
+  &.dark {
+    background: $colorDarkGrey;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+      background: darken($colorDarkGrey, 5%);
+    }
+
+    &.outline {
+      @extend %outline-button;
+      border-color: $colorDarkGrey;
+      color: $colorDarkGrey;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $colorCorpSecondary;
+        border-color: $colorCorpSecondary;
+        color: white;
+      }
+    }
+  }
+
+  &.bright {
+    background: white;
+    color: $colorDarkGrey;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+      background: darken($colorDarkGrey, 5%);
+    }
+
+   &.outline {
+      @extend %outline-button;
+      border-color: white;
+      color: white;
+    }
+  }
+
+  &.grey {
+    background: $colorLightGrey;
+    color: $colorDarkGrey;
+    text-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+      background: darken($colorLightGrey, 5%);
+    }
+  }
+
+  &.green {
+   background: $colorCorpSecondary;
+   color: $colorCorpSecondary;
+
+   &.outline {
+      @extend %outline-button;
+      border-color: $colorCorpSecondary;
+      color: $colorCorpSecondary;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: white;
+        color: white;
+        background: $colorCorpSecondary;
+      }
+    }
+  }
+
+  &.small {
+    padding: .7em;
+
+    &.loading .spinner {
+      background-size: 1em;
+      top: 0.5em;
+      right: 0.5em;
+    }
+
+    .checkmark {
+      width: 15px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  &.pill {
+    @extend %outline-button;
+  }
+
+  &.warning {
+    background-color: $colorWarningDarker;
+    border-color: $colorWarningDarker;
+  }
+}
+
+/**
+ * Loading spinner
+ */
+
+.spinner {
+  @include size(18px);
+  @include transition(all .3s .2s ease-in-out);
+  background: url('/images/spinner-bright.svg') no-repeat center center;
+  display: none;
+  position: absolute;
+  right: .8em;
+  top: .9em;
+}
+
+/**
+ * Apply .loading to parent button to enable spinner
+ */
+
+&.loading {
+  @include transition(padding .2s ease-in-out);
+  padding-right: 2.5em !important;
+
+  .spinner { display: inline-block }
+}

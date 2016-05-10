@@ -4,13 +4,13 @@
 
 .grid-container {
   @include outer-container;
-  @include pad($layoutPagePadding);
+  @include pad($gutter);
 
   &.no-pad {
     @include pad(0);
   }
 
-  @include media($breakTabletPortrait) { @include pad($layoutPagePadding * 2) }
+  @include media($breakTabletPortrait) { @include pad($gutter * 2) }
 }
 
 .style-guide-article>section {
@@ -21,13 +21,13 @@
 
 header {
   @include row;
-  padding-top: $layoutPagePadding/2 !important;
-  padding-bottom: $layoutPagePadding/2 !important;
+  padding-top: $gutter/2 !important;
+  padding-bottom: $gutter/2 !important;
 
   @include media($breakDesktop) {
     @include animation(fadeInDown .3s .5s ease-in backwards);
     position: absolute;
-    top: $layoutPagePadding;
+    top: $gutter;
     left: 50%;
     margin-left: -512px !important;
     background-color: white;

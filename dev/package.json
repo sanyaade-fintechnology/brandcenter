@@ -18,7 +18,6 @@
   "homepage": "https://github.com/sumup/sumup.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.12.3",
-    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-shell": "^0.5.2",
     "lodash": "^4.11.1"
