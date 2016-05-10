@@ -1,5 +1,2 @@
-name: SumUp brand center
-markdown: kramdown
-highlighter: rouge
-
+name: SumUp Brand Center
 exclude: [node_modules, gulpfile.js]
