@@ -1,0 +1,3 @@
+[submodule "src/assets/sass/global"]
+	path = src/assets/sass/global
+	url = git@github.com:sumup/global-stylesheets.git
