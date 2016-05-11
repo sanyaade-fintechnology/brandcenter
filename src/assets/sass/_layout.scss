@@ -38,10 +38,11 @@ header {
 }
 
 .logo {
-  background-image: url('/images/logo/sumup_logo_grey.svg');
-  background-size: 161px 42px;
-  width: 161px;
-  height: 42px;
+  background-image: url('/assets/images/logo/sumup_logo_grey.svg');
+  background-size: 154px 40px;
+  background-repeat: no-repeat;
+  width: 154px;
+  height: 40px;
   text-indent: -999px;
   display: block;
   float: left;
@@ -49,18 +50,23 @@ header {
 
 .main-navigation {
   float: right;
-  padding: em(8) 0;
+
 
   @include media(new-breakpoint(max-width 480px)) { display: none }
 
   li {
-    display: inline-block;
+    float: left;
     margin-left: 1em;
+
+    a {
+      display: block;
+    }
   }
 
   .button.outline {
     color: $colorDarkGrey;
     text-shadow: none;
+    border-color: $colorLightGrey;
 
     &:hover {
       background-color: $colorCorpHighlight;
@@ -75,8 +81,7 @@ header {
 //-------------------------------------
 
 footer {
-  background: url('/images/background.svg') no-repeat center center;
-  background-size: cover;
+  background-color: $colorDarkGrey;
   min-height: 100px;
 
   a {

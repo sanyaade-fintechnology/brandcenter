@@ -2,9 +2,13 @@ var gulp = require('gulp');
 var shell = require('gulp-shell');
 var del = require("del");
 var browserSync = require('browser-sync').create();
+var sass = require("gulp-sass");
+var notify = require("gulp-notify");
+var size = require("gulp-size");
 
-// Deletes the directory that is used to serve the site during development
-gulp.task("clean:dev", del.bind(null, ["dev"]));
+/**
+ * Building Jekyll Site
+ */
 
 // Runs the build command for Jekyll to compile the site locally
 // This will build the site with the production settings
@@ -13,3 +17,65 @@ gulp.task("jekyll:dev", shell.task("bundle exec jekyll build"));
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
   browserSync.reload();
 });
+
+// These tasks will look for files that change while serving and will auto-regenerate or
+// reload the website accordingly. Update or add other files you need to be watched.
+gulp.task("watch", function () {
+  gulp.watch([
+    "src/**/*.md",
+    "src/**/*.html",
+    "src/**/*.xml",
+    "src/**/*.txt",
+    "src/**/*.js"
+  ], ["jekyll-rebuild"]);
+
+  gulp.watch(["src/assets/sass/**/*.scss"], ["styles"]);
+});
+
+// BrowserSync will serve our site on a local server for us and other devices to use
+// It will also autoreload across all devices as well as keep the viewport synchronized
+// between them.
+gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
+  browserSync.init({
+    notify: true,
+    browser: "google chrome",
+    server: {
+      baseDir: "dev"
+    }
+  });
+});
+
+
+/**
+ * Compiling SASS files
+ */
+
+gulp.task("styles", function () {
+  // Looks at the style.scss file for what to include and creates a style.css file
+  return gulp.src("src/assets/sass/main.scss")
+    .pipe(sass())
+    .on('error', errorHandler)
+    .on("error", notify.onError())
+    .pipe(gulp.dest("src/assets/css/"))
+    .pipe(gulp.dest("dev/assets/css/"))
+    // Outputs the size of the CSS file
+    .pipe(size({title: "styles"}))
+    // Injects the CSS changes to your browser since Jekyll doesn"t rebuild the CSS
+    .pipe(browserSync.reload({stream: true}));
+});
+
+/**
+ * Error handling on sass compilation for example
+ */
+function errorHandler (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
+
+
+/**
+ * Gulp workflow
+ */
+
+// Default task, run when just writing "gulp" in the terminal
+gulp.task("default", ["serve:dev", "watch"]);

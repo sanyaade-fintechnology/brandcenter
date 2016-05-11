@@ -68,6 +68,7 @@ figcaption.incorrect {
     width: 60%;
     margin: 12% 0;
     max-height: 100px;
+    display: inline-block;
 
     @include media($breakTabletPortrait) {
       width: 50%;
