@@ -5,6 +5,7 @@ var browserSync = require('browser-sync').create();
 var sass = require("gulp-sass");
 var notify = require("gulp-notify");
 var size = require("gulp-size");
+var ghPages = require('gulp-gh-pages');
 
 /**
  * Building Jekyll Site
@@ -79,3 +80,10 @@ function errorHandler (error) {
 
 // Default task, run when just writing "gulp" in the terminal
 gulp.task("default", ["serve:dev", "watch"]);
+
+gulp.task('deploy', function() {
+  return gulp.src('./dev/**/*')
+    .pipe(ghPages({
+      branch: "master"
+    }));
+});
