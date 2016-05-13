@@ -19,6 +19,11 @@ gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
   browserSync.reload();
 });
 
+// Almost identical to the above task, but instead we load in the build configuration
+// that overwrites some of the settings in the regular configuration so that you
+// don"t end up publishing your drafts or future posts
+gulp.task("jekyll:prod", ["styles"], shell.task("bundle exec jekyll build --config _config.yml,_config.prod.yml"));
+
 // These tasks will look for files that change while serving and will auto-regenerate or
 // reload the website accordingly. Update or add other files you need to be watched.
 gulp.task("watch", function () {
@@ -81,8 +86,8 @@ function errorHandler (error) {
 // Default task, run when just writing "gulp" in the terminal
 gulp.task("default", ["serve:dev", "watch"]);
 
-gulp.task('deploy', function() {
-  return gulp.src('./dev/**/*')
+gulp.task('deploy', ["jekyll:prod"], function() {
+  return gulp.src('./prod/**/*')
     .pipe(ghPages({
       branch: "gh-pages"
     }));

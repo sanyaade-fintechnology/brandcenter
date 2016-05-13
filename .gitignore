@@ -1,6 +1,7 @@
 .DS_Store
 .sass-cache
 dev/*
+prod/*
 src/assets/css/main.css
 node_modules
 .publish
