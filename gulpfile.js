@@ -84,6 +84,6 @@ gulp.task("default", ["serve:dev", "watch"]);
 gulp.task('deploy', function() {
   return gulp.src('./dev/**/*')
     .pipe(ghPages({
-      branch: "master"
+      branch: "gh-pages"
     }));
 });

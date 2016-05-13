@@ -18,5 +18,3 @@ Install node modules: `npm install`
 `jekyll serve`
 
 ## Deploying
-
-To update the online site, just push a change to master!
