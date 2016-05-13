@@ -18,3 +18,5 @@ Install node modules: `npm install`
 `jekyll serve`
 
 ## Deploying
+
+When you're ready to deploy your changes just run `gulp deploy` from the command line. The gulp task will compile your site again, and add the contents of the `prod` directory to the branch `gh-pages` which Github uses to host the site.
