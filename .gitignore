@@ -1,6 +1,0 @@
-.DS_Store
-.sass-cache
-dev/*
-src/assets/css/main.css
-node_modules
-.publish
