@@ -2,102 +2,162 @@
 // Color guidelines
 //-------------------------------------
 
-.color-guidelines {
+.color-values {
+  li:not(:last-child) {
+    border-bottom: 1px solid;
+    border-color: $colorLightGrey;
+  }
+
+  .label {
+    display: inline-block;
+    width: 30%;
+    font-weight: 500;
+    font-size: em(12);
+    text-transform: uppercase;
+  }
+
+  .value {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: em(12);
+  }
+}
+
+.color-group {
   @include row();
 }
 
-.color-tiles {
+/**
+ * Primary Colors
+ */
+
+.primary-colors .color-tiles {
   & > li {
     @include span-columns(12);
 
-    @include media($breakTabletPortrait) {
-      @include span-columns(6);
-      @include omega(2n);
-    }
-
     @include media($breakTabletLandscape) {
-      @include span-columns(3);
-      @include omega-reset(2n);
-      @include omega(4n);
+      @include span-columns(6);
+    }
+  }
+}
+
+.primary-color {
+  header {
+    display: flex;
+    min-height: 6em;
+
+    h4 {
+      white-space: nowrap;
+      margin-top: 0.3em;
+      margin-right: $layoutPagePadding;
     }
   }
 
-  .color-sample {
-    @extend %margin-bottom-small;
-    padding-top: 20%;
+  .desc {
+    padding-left: $layoutCompPadding;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: $layoutPagePadding;
+      content: "";
+      height: 1px;
+      width: $layoutPagePadding;
+      background-color: $colorCorpHighlight;
+      display: block;
+    }
+  }
+
+  .example {
+    padding: $layoutCompPadding;
     border-radius: $layoutCornerRadius;
-    background-color: $colorLightGrey;
-
-    @include media($breakTabletLandscape) { padding-top: 40% }
   }
 
-  .blue .color-sample { background-color: $colorCorpHighlight }
-  .darkgrey .color-sample { background-color: $colorDarkGrey }
-  .lightgrey .color-sample { background-color: $colorLightGrey }
-  .offwhite .color-sample { background-color: $colorOffWhite }
-  .signal-green .color-sample { background-color: $colorSuccess }
-  .signal-orange .color-sample { background-color: $colorWarning }
-  .signal-red .color-sample { background-color: $colorError }
-
-  .definitions {
-    li {
-      border-bottom: 1px solid $colorLightGrey;
-    }
-
-    .label {
-      display: inline-block;
-      width: em(90);
-      font-weight: 500;
-      font-size: 0.9em;
-      text-transform: uppercase;
-    }
-
-    .value {
-      font-family: "Lucida Console", Monaco, monospace;
-      font-size: em(14);
-    }
-  }
-
-  .ase-download {
-    a {
-      @include row();
-      padding: 1em;
-      background-color: $colorOffWhite;
+  // Setting colors to examples
+  &.corp-highlight {
+    .example {
       border: 1px solid $colorLightGrey;
-      border-radius: $layoutCornerRadius;
     }
 
-    img, p { @include span-columns(6) }
-
-    p {
-      @include transition(all .15s);
-      @extend %no-margin;
-      font-size: em(11);
-      text-transform: uppercase;
-      line-height: 1.2;
-      font-weight: 500;
-      padding: 5%;
-      background-color: white;
-      border-radius: $layoutCornerRadius;
+    .highlight-example {
+      max-width: 80%;
+      margin: $layoutCompPadding auto;
+      background-color: $colorCorpHighlight;
       text-align: center;
+      color: white;
+      padding: $layoutPagePadding;
+      border-radius: $layoutCornerRadius;
     }
+  }
 
-    .icon-cloud-download {
-      @include transition(all .15s);
-      @include transform(translateY(5px));
-      font-size: em(50, 11);
-      display: inline-block;
-      color: $colorLightGrey;
-    }
+  .color-values {
+    padding-top: $layoutCompPadding;
+  }
 
-    &:hover p {
-      background-color: $colorSuccess;
-      color: $colorSuccess;
+  &.corp-darkgrey {
+    .example {
+      border: 1px solid $colorLightGrey;
 
-      .icon-cloud-download {
-        @include transform(translateY(-10px));
-        color: $colorOffWhite;
+      p:first-of-type { margin-top: 0 }
+
+      div {
+        padding: $layoutPagePadding;
+        margin-left: -$layoutPagePadding;
+        margin-right: -$layoutPagePadding;
+        background-color: $colorDarkGrey;
+        border-radius: $layoutCornerRadius;
+
+        p:first-child {
+          text-decoration: line-through;
+          color: $colorCorpHighlight;
+        }
+
+        p:last-child {
+          color: $colorOffWhite;
+          margin-bottom: 0;
+        }
       }
     }
+  }
+}
+
+/**
+ * Feedback Colors
+ */
+
+.feedback-colors .color-tiles {
+  & > li {
+    @include span-columns(12);
+
+    @include media($breakTabletLandscape) {
+      @include span-columns(4);
+    }
+  }
+}
+
+.feedback-color {
+  .example {
+    padding: $layoutCompPadding;
+
+    &.dark {
+      background-color: $colorDarkGrey;
+      color: $colorOffWhite;
+      border-radius: $layoutCornerRadius $layoutCornerRadius 0 0;
+
+      .color-values li {
+        border-color: lighten($colorDarkGrey, 10%);
+      }
+    }
+
+    &.light {
+      border-radius: 0 0 $layoutCornerRadius $layoutCornerRadius;
+      background-color: $colorOffWhite;
+    }
+  }
+
+  .example-content {
+    border-radius: $layoutCornerRadius;
+    padding-top: 30%;
+    margin-bottom: $layoutPagePadding;
   }
 }

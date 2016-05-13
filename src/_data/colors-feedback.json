@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Success Feedback",
+    "handle": "success-colors",
+    "examples": {
+      "dark": {
+        "Hex": "#3EEC91",
+        "RGB": "62/236/145",
+        "Sass": "$colorSuccess"
+      },
+      "light": {
+        "Hex": "#35C97C",
+        "RGB": "53/201/124",
+        "Sass": "$colorSuccessDarker"
+      }
+    }
+  },
+  {
+    "name": "Warning",
+    "handle": "warning-colors",
+    "examples": {
+      "dark": {
+        "Hex": "#F3C667",
+        "RGB": "243/198/103",
+        "Sass": "$colorWarning"
+      },
+      "light": {
+        "Hex": "#EAB157",
+        "RGB": "234/177/87",
+        "Sass": "$colorWarningDarker"
+      }
+    }
+  },
+  {
+    "name": "Error/Alert",
+    "handle": "error-colors",
+    "examples": {
+      "dark": {
+        "Hex": "#F6666C",
+        "RGB": "246/102/108",
+        "Sass": "$colorError"
+      },
+      "light": {
+        "Hex": "#DB565B",
+        "RGB": "219/86/91",
+        "Sass": "$colorErrorDarker"
+      }
+    }
+  }
+]

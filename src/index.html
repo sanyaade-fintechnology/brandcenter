@@ -14,13 +14,11 @@ title: Welcome!
 <!-- end welcome -->
 
 <article id="styleguide" class="grid-container style-guide-article">
-  <h2>Styleguide</h2>
-
   <section class="logo-guidelines">
-    <h3>The SumUp Logo</h3>
+    <h2>The SumUp Logo</h2>
 
     <article class="correct-usage">
-      <h4>Correct usage</h4>
+      <h3>Correct usage</h3>
       <p>There are two different color combinations to use the SumUp Logo:</p>
 
       <div class="logo-usages">
@@ -41,7 +39,7 @@ title: Welcome!
     </article>
 
     <article class="incorrect-usage">
-      <h4><span class="incorrect">Incorrect usage</span></h4>
+      <h3><span class="incorrect">Incorrect usage</span></h3>
 
       <div class="logo-usages">
         <div class="figure-wrap">
@@ -56,149 +54,63 @@ title: Welcome!
   <!-- end logo guidelines -->
 
   <section class="color-guidelines">
-    <h3>Colors</h3>
+    <h2>Colors</h2>
 
-    <ul class="unstyled color-tiles">
-      <li class="blue">
-        <h4>Highlight Blue</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#00a5df</span>
+    <section class="color-group primary-colors">
+      <h3>Primary Colors</h3>
+      <ul class="unstyled color-tiles">
+        {% for color in site.data.colors-primary %}
+          <li class="primary-color {{ color.handle }}">
+            <header>
+              <h4>{{ color.name }}</h4>
+
+              <article class="desc">
+                <small>{{ color.desc }}</small>
+              </article>
+            </header>
+
+            <figure class="example">
+              {{ color.example }}
+              <ul class="unstyled color-values">
+                {% for value in color.values %}
+                  <li>
+                    <span class="label">{{ value[0] }}</span>
+                    <span class="value">{{ value[1] }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </figure>
           </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">0/165/223</span>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="color-group feedback-colors">
+      <h3>Feedback Colors</h3>
+      <ul class="unstyled color-tiles">
+        {% for color in site.data.colors-feedback %}
+          <li class="feedback-color {{ color.handle }}">
+            <h4>{{ color.name }}</h4>
+
+            {% for example in color.examples %}
+              <figure class="example {{ example[0] }}">
+                <div class="example-content" style="background-color: {{ example[1].Hex }}"></div>
+                <ul class="unstyled color-values">
+                  {% for value in example[1] %}
+                    <li>
+                      <span class="label">{{ value[0] }}</span>
+                      <span class="value">{{ value[1] }}</span>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </figure>
+            {% endfor %}
           </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">92/0/6/0</span>
-          </li>
-          <li>
-            <span class="label">Pantone</span>
-            <span class="value">2995C</span>
-          </li>
-        </ul>
-      </li>
-      <li class="darkgrey">
-        <h4>Darkgrey</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#47494d</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">71/73/77</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">44/34/22/77</span>
-          </li>
-          <li>
-            <span class="label">Pantone</span>
-            <span class="value">Cool Gray 11C</span>
-          </li>
-        </ul>
-      </li>
-      <li class="lightgrey">
-        <h4>Lightgrey</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#E5E5E5</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">229/229/229</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">4/2/4/8</span>
-          </li>
-          <li>
-            <span class="label">Pantone</span>
-            <span class="value">Cool Gray 1C</span>
-          </li>
-        </ul>
-      </li>
-      <li class="offwhite">
-        <h4>Offwhite</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#f7f7f7</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">247/247/247</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">4/3/3/0</span>
-          </li>
-        </ul>
-      </li>
-      <li class="signal-green">
-        <h4>Signal green</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#3EEC91</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">62/236/145</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">58/0/64/0</span>
-          </li>
-        </ul>
-      </li>
-      <li class="signal-orange">
-        <h4>Signal orange</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#F8C155</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">248/193/85</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">2/25/77/0</span>
-          </li>
-        </ul>
-      </li>
-      <li class="signal-red">
-        <h4>Signal red</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#FF6B71</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">255/107/113</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">0/73/44/0</span>
-          </li>
-        </ul>
-      </li>
-    </ul>
+        {% endfor %}
+      </ul>
+    </section>
   </section>
+
   <!-- end color guidelines -->
   <section class="ui-guidelines">
     <h3>User interface</h3>

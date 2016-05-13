@@ -19,7 +19,7 @@
 
 /* Main navigation */
 
-header {
+.main-header {
   @include row;
   padding-top: $gutter/2 !important;
   padding-bottom: $gutter/2 !important;
