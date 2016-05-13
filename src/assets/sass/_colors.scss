@@ -136,22 +136,26 @@
 }
 
 .feedback-color {
+  h2 {
+    margin-top: 0;
+  }
+
   .example {
     padding: $layoutCompPadding;
+
+    &.light {
+      border-radius: $layoutCornerRadius $layoutCornerRadius 0 0;
+      background-color: $colorOffWhite;
+    }
 
     &.dark {
       background-color: $colorDarkGrey;
       color: $colorOffWhite;
-      border-radius: $layoutCornerRadius $layoutCornerRadius 0 0;
+      border-radius: 0 0 $layoutCornerRadius $layoutCornerRadius;
 
       .color-values li {
         border-color: lighten($colorDarkGrey, 10%);
       }
-    }
-
-    &.light {
-      border-radius: 0 0 $layoutCornerRadius $layoutCornerRadius;
-      background-color: $colorOffWhite;
     }
   }
 
