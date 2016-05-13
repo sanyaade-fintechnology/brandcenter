@@ -108,7 +108,7 @@ select[readonly], .custom.select select[disabled], .custom.select select[disable
   list-style: none;
   padding-left: 0; }
 
-.logo-usages figure, .color-tiles .ase-download p {
+.logo-usages figure {
   margin: 0; }
 
 .welcome h1 {
@@ -122,9 +122,6 @@ blockquote cite, .detach.parsley-errors-list li, .detach.validation-list li:nth-
 
 .inline-inputs.block-mobile > li:nth-child(even), .button-set {
   margin-top: 1em; }
-
-.color-tiles .color-sample {
-  margin-bottom: .5em; }
 
 .form-list > li, .detach.parsley-errors-list li {
   margin-bottom: 1em; }
@@ -1103,7 +1100,7 @@ textarea {
       background: #d8d8d8; }
   .button.green {
     background: #35C97C;
-    color: #35C97C; }
+    color: white; }
     .button.green.outline {
       border-color: #35C97C;
       color: #35C97C; }
@@ -1170,16 +1167,16 @@ textarea {
   padding-bottom: 1.875em; }
 
 /* Main navigation */
-header {
+.main-header {
   display: block;
   padding-top: 0.809em !important;
   padding-bottom: 0.809em !important; }
-  header:after {
+  .main-header:after {
     content: "";
     display: table;
     clear: both; }
   @media screen and (min-width: 1025px) {
-    header {
+    .main-header {
       -webkit-animation: fadeInDown 0.3s 0.5s ease-in backwards;
       -moz-animation: fadeInDown 0.3s 0.5s ease-in backwards;
       animation: fadeInDown 0.3s 0.5s ease-in backwards;
@@ -1348,147 +1345,139 @@ figcaption.incorrect strong {
   .logo-usages .logo-on-blue {
     background-color: #00a5df; }
 
-.color-guidelines {
+.color-values li:not(:last-child) {
+  border-bottom: 1px solid;
+  border-color: #e5e5e5; }
+
+.color-values .label {
+  display: inline-block;
+  width: 30%;
+  font-weight: 500;
+  font-size: 0.75em;
+  text-transform: uppercase; }
+
+.color-values .value {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.75em; }
+
+.color-group {
   display: block; }
-  .color-guidelines:after {
+  .color-group:after {
     content: "";
     display: table;
     clear: both; }
 
-.color-tiles > li {
+/**
+ * Primary Colors
+ */
+.primary-colors .color-tiles > li {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .color-tiles > li:last-child {
+  .primary-colors .color-tiles > li:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 481px) {
-    .color-tiles > li {
+  @media screen and (min-width: 769px) {
+    .primary-colors .color-tiles > li {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 48.82117%; }
-      .color-tiles > li:last-child {
-        margin-right: 0; }
-      .color-tiles > li:nth-child(2n) {
-        margin-right: 0; }
-      .color-tiles > li:nth-child(2n+1) {
-        clear: left; } }
-  @media screen and (min-width: 769px) {
-    .color-tiles > li {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%; }
-      .color-tiles > li:last-child {
-        margin-right: 0; }
-      .color-tiles > li:nth-child(2n) {
-        margin-right: 2.35765%; }
-      .color-tiles > li:nth-child(2n+1) {
-        clear: none; }
-      .color-tiles > li:nth-child(4n) {
-        margin-right: 0; }
-      .color-tiles > li:nth-child(4n+1) {
-        clear: left; } }
+      .primary-colors .color-tiles > li:last-child {
+        margin-right: 0; } }
 
-.color-tiles .color-sample {
-  padding-top: 20%;
-  border-radius: 3px;
-  background-color: #e5e5e5; }
-  @media screen and (min-width: 769px) {
-    .color-tiles .color-sample {
-      padding-top: 40%; } }
+.primary-color header {
+  display: flex;
+  min-height: 6em; }
+  .primary-color header h4 {
+    white-space: nowrap;
+    margin-top: 0.3em;
+    margin-right: 1em; }
 
-.color-tiles .blue .color-sample {
-  background-color: #00a5df; }
-
-.color-tiles .darkgrey .color-sample {
-  background-color: #47494d; }
-
-.color-tiles .lightgrey .color-sample {
-  background-color: #e5e5e5; }
-
-.color-tiles .offwhite .color-sample {
-  background-color: #f7f7f7; }
-
-.color-tiles .signal-green .color-sample {
-  background-color: #3EEC91; }
-
-.color-tiles .signal-orange .color-sample {
-  background-color: #F3C667; }
-
-.color-tiles .signal-red .color-sample {
-  background-color: #FF9EA2; }
-
-.color-tiles .definitions li {
-  border-bottom: 1px solid #e5e5e5; }
-
-.color-tiles .definitions .label {
-  display: inline-block;
-  width: 5.625em;
-  font-weight: 500;
-  font-size: 0.9em;
-  text-transform: uppercase; }
-
-.color-tiles .definitions .value {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 0.875em; }
-
-.color-tiles .ase-download a {
-  display: block;
-  padding: 1em;
-  background-color: #f7f7f7;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px; }
-  .color-tiles .ase-download a:after {
+.primary-color .desc {
+  padding-left: 2em;
+  position: relative; }
+  .primary-color .desc:before {
+    position: absolute;
+    left: 0;
+    top: 1em;
     content: "";
-    display: table;
-    clear: both; }
+    height: 1px;
+    width: 1em;
+    background-color: #00a5df;
+    display: block; }
 
-.color-tiles .ase-download img, .color-tiles .ase-download p {
+.primary-color .example {
+  padding: 2em;
+  border-radius: 3px; }
+
+.primary-color.corp-highlight .example {
+  border: 1px solid #e5e5e5; }
+
+.primary-color.corp-highlight .highlight-example {
+  max-width: 80%;
+  margin: 2em auto;
+  background-color: #00a5df;
+  text-align: center;
+  color: white;
+  padding: 1em;
+  border-radius: 3px; }
+
+.primary-color .color-values {
+  padding-top: 2em; }
+
+.primary-color.corp-darkgrey .example {
+  border: 1px solid #e5e5e5; }
+  .primary-color.corp-darkgrey .example p:first-of-type {
+    margin-top: 0; }
+  .primary-color.corp-darkgrey .example div {
+    padding: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    background-color: #47494d;
+    border-radius: 3px; }
+    .primary-color.corp-darkgrey .example div p:first-child {
+      text-decoration: line-through;
+      color: #00a5df; }
+    .primary-color.corp-darkgrey .example div p:last-child {
+      color: #f7f7f7;
+      margin-bottom: 0; }
+
+/**
+ * Feedback Colors
+ */
+.feedback-colors .color-tiles > li {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%; }
-  .color-tiles .ase-download img:last-child, .color-tiles .ase-download p:last-child {
+  width: 100%; }
+  .feedback-colors .color-tiles > li:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 769px) {
+    .feedback-colors .color-tiles > li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .feedback-colors .color-tiles > li:last-child {
+        margin-right: 0; } }
 
-.color-tiles .ase-download p {
-  -webkit-transition: all 0.15s;
-  -moz-transition: all 0.15s;
-  transition: all 0.15s;
-  font-size: 0.6875em;
-  text-transform: uppercase;
-  line-height: 1.2;
-  font-weight: 500;
-  padding: 5%;
-  background-color: white;
+.feedback-color .example {
+  padding: 2em; }
+  .feedback-color .example.dark {
+    background-color: #47494d;
+    color: #f7f7f7;
+    border-radius: 3px 3px 0 0; }
+    .feedback-color .example.dark .color-values li {
+      border-color: #5f6268; }
+  .feedback-color .example.light {
+    border-radius: 0 0 3px 3px;
+    background-color: #f7f7f7; }
+
+.feedback-color .example-content {
   border-radius: 3px;
-  text-align: center; }
-
-.color-tiles .ase-download .icon-cloud-download {
-  -webkit-transition: all 0.15s;
-  -moz-transition: all 0.15s;
-  transition: all 0.15s;
-  -webkit-transform: translateY(5px);
-  -moz-transform: translateY(5px);
-  -ms-transform: translateY(5px);
-  -o-transform: translateY(5px);
-  transform: translateY(5px);
-  font-size: 4.54545em;
-  display: inline-block;
-  color: #e5e5e5; }
-
-.color-tiles .ase-download:hover p {
-  background-color: #3EEC91;
-  color: #3EEC91; }
-  .color-tiles .ase-download:hover p .icon-cloud-download {
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
-    transform: translateY(-10px);
-    color: #f7f7f7; }
+  padding-top: 30%;
+  margin-bottom: 1em; }
 
 @media screen and (min-width: 769px) {
   .ui-guidelines .buttons {

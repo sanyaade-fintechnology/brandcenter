@@ -11,7 +11,7 @@
 <body>
 
   <div class="page">
-    <header class="grid-container">
+    <header class="main-header grid-container">
       <a href="/" class="logo">SumUp Brand Center</a>
 
       <nav class="main-navigation">
@@ -35,13 +35,11 @@
 <!-- end welcome -->
 
 <article id="styleguide" class="grid-container style-guide-article">
-  <h2>Styleguide</h2>
-
   <section class="logo-guidelines">
-    <h3>The SumUp Logo</h3>
+    <h2>The SumUp Logo</h2>
 
     <article class="correct-usage">
-      <h4>Correct usage</h4>
+      <h3>Correct usage</h3>
       <p>There are two different color combinations to use the SumUp Logo:</p>
 
       <div class="logo-usages">
@@ -62,7 +60,7 @@
     </article>
 
     <article class="incorrect-usage">
-      <h4><span class="incorrect">Incorrect usage</span></h4>
+      <h3><span class="incorrect">Incorrect usage</span></h3>
 
       <div class="logo-usages">
         <div class="figure-wrap">
@@ -77,149 +75,257 @@
   <!-- end logo guidelines -->
 
   <section class="color-guidelines">
-    <h3>Colors</h3>
+    <h2>Colors</h2>
 
-    <ul class="unstyled color-tiles">
-      <li class="blue">
-        <h4>Highlight Blue</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#00a5df</span>
+    <section class="color-group primary-colors">
+      <h3>Primary Colors</h3>
+      <ul class="unstyled color-tiles">
+        
+          <li class="primary-color corp-highlight">
+            <header>
+              <h4>Highlight Blue</h4>
+
+              <article class="desc">
+                <small><p>Used as the primary color for elements like CTA Buttons and others that are supposed to aquire the viewers attention.</p> <p>Place on Off-White backgrounds primarily.</p> </small>
+              </article>
+            </header>
+
+            <figure class="example">
+              <div class="highlight-example">Look at me!</div>
+              <ul class="unstyled color-values">
+                
+                  <li>
+                    <span class="label">Hex</span>
+                    <span class="value">#00a5df</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">RGB</span>
+                    <span class="value">0/165/223</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">Sass</span>
+                    <span class="value">$colorCorpHighlight</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">CMYK</span>
+                    <span class="value">92/0/6/0</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">Pantone</span>
+                    <span class="value">2995C</span>
+                  </li>
+                
+              </ul>
+            </figure>
           </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">0/165/223</span>
+        
+          <li class="primary-color corp-darkgrey">
+            <header>
+              <h4>Dark Grey</h4>
+
+              <article class="desc">
+                <small><p>Dark grey is our primary text and logo color.</p> <p>In some cases used as background color</p></small>
+              </article>
+            </header>
+
+            <figure class="example">
+              <p>Ahh a paragraph of text. The fundamental building block of text communication.</p> <div><p>We never use Highlight Blue on Dark Grey</p><p>We just our fabulous Off White color here.</p></div>
+              <ul class="unstyled color-values">
+                
+                  <li>
+                    <span class="label">Hex</span>
+                    <span class="value">#47494d</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">RGB</span>
+                    <span class="value">44/34/22/77</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">Sass</span>
+                    <span class="value">$colorDarkGrey</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">CMYK</span>
+                    <span class="value">92/0/6/0</span>
+                  </li>
+                
+                  <li>
+                    <span class="label">Pantone</span>
+                    <span class="value">Cool Gray 11C</span>
+                  </li>
+                
+              </ul>
+            </figure>
           </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">92/0/6/0</span>
+        
+      </ul>
+    </section>
+
+    <section class="color-group feedback-colors">
+      <h3>Feedback Colors</h3>
+      <ul class="unstyled color-tiles">
+        
+          <li class="feedback-color success-colors">
+            <h4>Success Feedback</h4>
+
+            
+              <figure class="example dark">
+                <div class="example-content" style="background-color: #3EEC91"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#3EEC91</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">62/236/145</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorSuccess</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
+              <figure class="example light">
+                <div class="example-content" style="background-color: #35C97C"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#35C97C</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">53/201/124</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorSuccessDarker</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
           </li>
-          <li>
-            <span class="label">Pantone</span>
-            <span class="value">2995C</span>
+        
+          <li class="feedback-color warning-colors">
+            <h4>Warning</h4>
+
+            
+              <figure class="example dark">
+                <div class="example-content" style="background-color: #F3C667"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#F3C667</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">243/198/103</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorWarning</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
+              <figure class="example light">
+                <div class="example-content" style="background-color: #EAB157"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#EAB157</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">234/177/87</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorWarningDarker</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
           </li>
-        </ul>
-      </li>
-      <li class="darkgrey">
-        <h4>Darkgrey</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#47494d</span>
+        
+          <li class="feedback-color error-colors">
+            <h4>Error/Alert</h4>
+
+            
+              <figure class="example dark">
+                <div class="example-content" style="background-color: #F6666C"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#F6666C</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">246/102/108</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorError</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
+              <figure class="example light">
+                <div class="example-content" style="background-color: #DB565B"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#DB565B</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">219/86/91</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorErrorDarker</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
           </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">71/73/77</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">44/34/22/77</span>
-          </li>
-          <li>
-            <span class="label">Pantone</span>
-            <span class="value">Cool Gray 11C</span>
-          </li>
-        </ul>
-      </li>
-      <li class="lightgrey">
-        <h4>Lightgrey</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#E5E5E5</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">229/229/229</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">4/2/4/8</span>
-          </li>
-          <li>
-            <span class="label">Pantone</span>
-            <span class="value">Cool Gray 1C</span>
-          </li>
-        </ul>
-      </li>
-      <li class="offwhite">
-        <h4>Offwhite</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#f7f7f7</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">247/247/247</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">4/3/3/0</span>
-          </li>
-        </ul>
-      </li>
-      <li class="signal-green">
-        <h4>Signal green</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#3EEC91</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">62/236/145</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">58/0/64/0</span>
-          </li>
-        </ul>
-      </li>
-      <li class="signal-orange">
-        <h4>Signal orange</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#F8C155</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">248/193/85</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">2/25/77/0</span>
-          </li>
-        </ul>
-      </li>
-      <li class="signal-red">
-        <h4>Signal red</h4>
-        <div class="color-sample"></div>
-        <ul class="definitions">
-          <li>
-            <span class="label">Hex</span>
-            <span class="value">#FF6B71</span>
-          </li>
-          <li>
-            <span class="label">RGB</span>
-            <span class="value">255/107/113</span>
-          </li>
-          <li>
-            <span class="label">CMYK</span>
-            <span class="value">0/73/44/0</span>
-          </li>
-        </ul>
-      </li>
-    </ul>
+        
+      </ul>
+    </section>
   </section>
+
   <!-- end color guidelines -->
   <section class="ui-guidelines">
     <h3>User interface</h3>
