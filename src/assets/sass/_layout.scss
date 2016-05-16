@@ -13,8 +13,10 @@
   @include media($breakTabletPortrait) { @include pad($gutter * 2) }
 }
 
-.style-guide-article>section {
-  padding-bottom: em(30);
+.content-wrapper > section {
+  margin-bottom: $layoutPagePadding;
+  padding-bottom: $layoutCompPadding * 3;
+  border-bottom: 1px solid $colorLightGrey;
 }
 
 /* Main navigation */

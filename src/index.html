@@ -13,7 +13,7 @@ title: Welcome!
 </div>
 <!-- end welcome -->
 
-<article id="styleguide" class="grid-container style-guide-article">
+<div id="styleguide" class="grid-container content-wrapper">
   <section class="logo-guidelines">
     <h2>The SumUp Logo</h2>
 
@@ -58,7 +58,7 @@ title: Welcome!
 
     <p><a href="https://static.sumup.com/downloads/SumUp-Colors-Sketch.sketchpalette.zip" class="button small">Download Sketch Color Palette</a></p>
 
-    <section class="color-group primary-colors">
+    <article class="color-group primary-colors">
       <h3>Primary Colors</h3>
       <ul class="unstyled color-tiles">
         {% for color in site.data.colors-primary %}
@@ -85,9 +85,9 @@ title: Welcome!
           </li>
         {% endfor %}
       </ul>
-    </section>
+    </article>
 
-    <section class="color-group feedback-colors">
+    <article class="color-group feedback-colors">
       <h3>Feedback Colors</h3>
       <p>These colors are indended to be used with elements that provide feedback to the user. <br>
         For example notifications, succesful transactions screens or icons in the sales history.</p>
@@ -112,7 +112,7 @@ title: Welcome!
           </li>
         {% endfor %}
       </ul>
-    </section>
+    </article>
   </section>
 
   <!-- end color guidelines -->
@@ -146,36 +146,29 @@ title: Welcome!
         </ul>
       </li>
     </ul>
-</article>
-
-<article id="downloads" class="grid-container style-guide-article">
-  <h2>Downloads</h2>
-
-  <section class="download">
-    <ul class="unstyled download-list">
-      <li>
-        <h4>Logos for print</h4>
-        <p>Logo pack in CMYK for printing, both in vector and raster formats.</p>
-        <a href="https://static.sumup.com/downloads/sumup-logo-print.zip" class="small button">Download</a>
-      </li>
-      <li>
-        <h4>Logos for web</h4>
-        <p>Logo pack in RGB for the web, both in vector and raster formats.</p>
-        <a href="https://static.sumup.com/downloads/sumup-logo-web.zip" class="small button">Download</a>
-      </li>
-      <li class="disabled">
-        <h4>Slides</h4>
-        <p>Powerpoint template.</p>
-        <a href="https://static.sumup.com/downloads/sumup-powerpoint-template.zip" class="small button">Download</a>
-      </li>
-    </ul>
   </section>
-</article>
 
-<article id="language" class="grid-container style-guide-article" style="display: none;">
-  <h2>Language</h2>
+  <section class="downloads">
+    <h2>Downloads</h2>
 
-  <section class="language">
-    <!-- Sibylle goes wild here -->
+    <section class="download">
+      <ul class="unstyled download-list">
+        <li>
+          <h4>Logos for print</h4>
+          <p>Logo pack in CMYK for printing, both in vector and raster formats.</p>
+          <a href="https://static.sumup.com/downloads/sumup-logo-print.zip" class="small button">Download</a>
+        </li>
+        <li>
+          <h4>Logos for web</h4>
+          <p>Logo pack in RGB for the web, both in vector and raster formats.</p>
+          <a href="https://static.sumup.com/downloads/sumup-logo-web.zip" class="small button">Download</a>
+        </li>
+        <li class="disabled">
+          <h4>Slides</h4>
+          <p>Powerpoint template.</p>
+          <a href="https://static.sumup.com/downloads/sumup-powerpoint-template.zip" class="small button">Download</a>
+        </li>
+      </ul>
+    </section>
   </section>
-</article>
+</div>
