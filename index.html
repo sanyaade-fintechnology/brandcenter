@@ -34,7 +34,7 @@
 </div>
 <!-- end welcome -->
 
-<article id="styleguide" class="grid-container style-guide-article">
+<div id="styleguide" class="grid-container content-wrapper">
   <section class="logo-guidelines">
     <h2>The SumUp Logo</h2>
 
@@ -77,7 +77,9 @@
   <section class="color-guidelines">
     <h2>Colors</h2>
 
-    <section class="color-group primary-colors">
+    <p><a href="https://static.sumup.com/downloads/SumUp-Colors-Sketch.sketchpalette.zip" class="button small">Download Sketch Color Palette</a></p>
+
+    <article class="color-group primary-colors">
       <h3>Primary Colors</h3>
       <ul class="unstyled color-tiles">
         
@@ -96,12 +98,12 @@
                 
                   <li>
                     <span class="label">Hex</span>
-                    <span class="value">#00a5df</span>
+                    <span class="value">#00A5DF</span>
                   </li>
                 
                   <li>
                     <span class="label">RGB</span>
-                    <span class="value">0/165/223</span>
+                    <span class="value">RGB(0, 165, 223)</span>
                   </li>
                 
                   <li>
@@ -133,17 +135,17 @@
             </header>
 
             <figure class="example">
-              <p>Ahh a paragraph of text. The fundamental building block of text communication.</p> <div><p>We never use Highlight Blue on Dark Grey</p><p>We just our fabulous Off White color here.</p></div>
+              <p>Ahh a paragraph of text. The fundamental building block of text communication.</p> <div><p>We never use Highlight Blue on Dark Grey</p><p>We just use our fabulous Off White color here.</p></div>
               <ul class="unstyled color-values">
                 
                   <li>
                     <span class="label">Hex</span>
-                    <span class="value">#47494d</span>
+                    <span class="value">#47494D</span>
                   </li>
                 
                   <li>
                     <span class="label">RGB</span>
-                    <span class="value">44/34/22/77</span>
+                    <span class="value">RGB(71, 73, 77)</span>
                   </li>
                 
                   <li>
@@ -153,7 +155,7 @@
                 
                   <li>
                     <span class="label">CMYK</span>
-                    <span class="value">92/0/6/0</span>
+                    <span class="value">44/34/22/77</span>
                   </li>
                 
                   <li>
@@ -166,37 +168,17 @@
           </li>
         
       </ul>
-    </section>
+    </article>
 
-    <section class="color-group feedback-colors">
+    <article class="color-group feedback-colors">
       <h3>Feedback Colors</h3>
+      <p>These colors are indended to be used with elements that provide feedback to the user. <br>
+        For example notifications, succesful transactions screens or icons in the sales history.</p>
       <ul class="unstyled color-tiles">
         
           <li class="feedback-color success-colors">
             <h4>Success Feedback</h4>
 
-            
-              <figure class="example dark">
-                <div class="example-content" style="background-color: #3EEC91"></div>
-                <ul class="unstyled color-values">
-                  
-                    <li>
-                      <span class="label">Hex</span>
-                      <span class="value">#3EEC91</span>
-                    </li>
-                  
-                    <li>
-                      <span class="label">RGB</span>
-                      <span class="value">62/236/145</span>
-                    </li>
-                  
-                    <li>
-                      <span class="label">Sass</span>
-                      <span class="value">$colorSuccess</span>
-                    </li>
-                  
-                </ul>
-              </figure>
             
               <figure class="example light">
                 <div class="example-content" style="background-color: #35C97C"></div>
@@ -220,33 +202,33 @@
                 </ul>
               </figure>
             
+              <figure class="example dark">
+                <div class="example-content" style="background-color: #3EEC91"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#3EEC91</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">62/236/145</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorSuccess</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
           </li>
         
           <li class="feedback-color warning-colors">
             <h4>Warning</h4>
 
-            
-              <figure class="example dark">
-                <div class="example-content" style="background-color: #F3C667"></div>
-                <ul class="unstyled color-values">
-                  
-                    <li>
-                      <span class="label">Hex</span>
-                      <span class="value">#F3C667</span>
-                    </li>
-                  
-                    <li>
-                      <span class="label">RGB</span>
-                      <span class="value">243/198/103</span>
-                    </li>
-                  
-                    <li>
-                      <span class="label">Sass</span>
-                      <span class="value">$colorWarning</span>
-                    </li>
-                  
-                </ul>
-              </figure>
             
               <figure class="example light">
                 <div class="example-content" style="background-color: #EAB157"></div>
@@ -270,33 +252,33 @@
                 </ul>
               </figure>
             
+              <figure class="example dark">
+                <div class="example-content" style="background-color: #F3C667"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#F3C667</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">243/198/103</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorWarning</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
           </li>
         
           <li class="feedback-color error-colors">
             <h4>Error/Alert</h4>
 
-            
-              <figure class="example dark">
-                <div class="example-content" style="background-color: #F6666C"></div>
-                <ul class="unstyled color-values">
-                  
-                    <li>
-                      <span class="label">Hex</span>
-                      <span class="value">#F6666C</span>
-                    </li>
-                  
-                    <li>
-                      <span class="label">RGB</span>
-                      <span class="value">246/102/108</span>
-                    </li>
-                  
-                    <li>
-                      <span class="label">Sass</span>
-                      <span class="value">$colorError</span>
-                    </li>
-                  
-                </ul>
-              </figure>
             
               <figure class="example light">
                 <div class="example-content" style="background-color: #DB565B"></div>
@@ -320,10 +302,32 @@
                 </ul>
               </figure>
             
+              <figure class="example dark">
+                <div class="example-content" style="background-color: #F6666C"></div>
+                <ul class="unstyled color-values">
+                  
+                    <li>
+                      <span class="label">Hex</span>
+                      <span class="value">#F6666C</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">RGB</span>
+                      <span class="value">246/102/108</span>
+                    </li>
+                  
+                    <li>
+                      <span class="label">Sass</span>
+                      <span class="value">$colorError</span>
+                    </li>
+                  
+                </ul>
+              </figure>
+            
           </li>
         
       </ul>
-    </section>
+    </article>
   </section>
 
   <!-- end color guidelines -->
@@ -356,53 +360,33 @@
           <li><a href="#" title="" class="disabled small button">Disabled button</a></li>
         </ul>
       </li>
-      <li>
-        <h4>Mini buttons</h4>
-        <ul>
-          <li><a href="#" title="" class="mini button">Button</a></li>
-          <li><a href="#" title="" class="mini outline button">Outline button</a></li>
-          <li><a href="#" title="" class="mini blue outline button">Blue outline button</a></li>
-          <li><a href="#" title="" class="mini call-to-action button">Call-to-action button</a></li>
-          <li><a href="#" title="" class="mini grey button">Grey button</a></li>
-          <li><a href="#" title="" class="mini dark button">Dark button</a></li>
-          <li><a href="#" title="" class="mini green button">Green button</a></li>
-          <li><a href="#" title="" class="disabled mini button">Disabled button</a></li>
-        </ul>
-      </li>
-    </ul>
-</article>
-
-<article id="downloads" class="grid-container style-guide-article">
-  <h2>Downloads</h2>
-
-  <section class="download">
-    <ul class="unstyled download-list">
-      <li>
-        <h4>Logos for print</h4>
-        <p>Logo pack in CMYK for printing, both in vector and raster formats.</p>
-        <a href="https://static.sumup.com/downloads/sumup-logo-print.zip" class="small button">Download</a>
-      </li>
-      <li>
-        <h4>Logos for web</h4>
-        <p>Logo pack in RGB for the web, both in vector and raster formats.</p>
-        <a href="https://static.sumup.com/downloads/sumup-logo-web.zip" class="small button">Download</a>
-      </li>
-      <li class="disabled">
-        <h4>Slides</h4>
-        <p>Powerpoint template.</p>
-        <a href="https://static.sumup.com/downloads/sumup-powerpoint-template.zip" class="small button">Download</a>
-      </li>
     </ul>
   </section>
-</article>
 
-<article id="language" class="grid-container style-guide-article" style="display: none;">
-  <h2>Language</h2>
+  <section class="downloads">
+    <h2>Downloads</h2>
 
-  <section class="language">
-    <!-- Sibylle goes wild here -->
+    <section class="download">
+      <ul class="unstyled download-list">
+        <li>
+          <h4>Logos for print</h4>
+          <p>Logo pack in CMYK for printing, both in vector and raster formats.</p>
+          <a href="https://static.sumup.com/downloads/sumup-logo-print.zip" class="small button">Download</a>
+        </li>
+        <li>
+          <h4>Logos for web</h4>
+          <p>Logo pack in RGB for the web, both in vector and raster formats.</p>
+          <a href="https://static.sumup.com/downloads/sumup-logo-web.zip" class="small button">Download</a>
+        </li>
+        <li class="disabled">
+          <h4>Slides</h4>
+          <p>Powerpoint template.</p>
+          <a href="https://static.sumup.com/downloads/sumup-powerpoint-template.zip" class="small button">Download</a>
+        </li>
+      </ul>
+    </section>
   </section>
-</article>
+</div>
 
     </div>
   </div>

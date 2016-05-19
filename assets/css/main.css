@@ -678,7 +678,7 @@ label {
   .inline-inputs .custom.select select {
     border: 1px solid #e5e5e5; }
     .inline-inputs .custom.select select.ng-invalid.ng-dirty {
-      border-color: #FF9EA2; }
+      border-color: #F6666C; }
   .inline-inputs.block-mobile > li {
     width: 100%; }
     @media screen and (min-width: 769px) {
@@ -711,10 +711,10 @@ label {
     position: relative;
     top: -1px;
     line-height: 1;
-    border-left: 1px solid #FF9EA2;
-    border-bottom: 1px solid #FF9EA2;
-    border-right: 1px solid #FF9EA2;
-    background: #FF9EA2;
+    border-left: 1px solid #F6666C;
+    border-bottom: 1px solid #F6666C;
+    border-right: 1px solid #F6666C;
+    background: #F6666C;
     color: #f7f7f7;
     padding: .5em 1em !important; }
     .parsley-errors-list li.ng-hide-remove,
@@ -742,19 +742,19 @@ label {
 .detach.parsley-errors-list li {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border-top: 1px solid #FF9EA2; }
+  border-top: 1px solid #F6666C; }
 
 .detach.validation-list li {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border-top: 1px solid #FF9EA2; }
+  border-top: 1px solid #F6666C; }
 
 /**
  * Errored
  */
 .active-validation-list .parsley-error,
 .active-validation-list .ng-invalid.ng-dirty {
-  border: 1px solid #FF9EA2; }
+  border: 1px solid #F6666C; }
 
 input,
 input[type="text"],
@@ -1050,7 +1050,8 @@ textarea {
     -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #0092c6; }
+    background: #0092c6;
+    color: white; }
   .button.outline {
     border-color: #00a5df;
     color: #00a5df; }
@@ -1163,8 +1164,10 @@ textarea {
     .grid-container {
       padding: 3.236em; } }
 
-.style-guide-article > section {
-  padding-bottom: 1.875em; }
+.content-wrapper > section {
+  margin-bottom: 1em;
+  padding-bottom: 6em;
+  border-bottom: 1px solid #e5e5e5; }
 
 /* Main navigation */
 .main-header {
@@ -1281,7 +1284,7 @@ figure.incorrect {
     width: 70%;
     height: 3px;
     border-radius: 10px;
-    background-color: #FF9EA2;
+    background-color: #F6666C;
     position: absolute;
     top: 49.5%;
     left: 15%; }
@@ -1462,17 +1465,20 @@ figcaption.incorrect strong {
       .feedback-colors .color-tiles > li:last-child {
         margin-right: 0; } }
 
+.feedback-color h2 {
+  margin-top: 0; }
+
 .feedback-color .example {
   padding: 2em; }
+  .feedback-color .example.light {
+    border-radius: 3px 3px 0 0;
+    background-color: #f7f7f7; }
   .feedback-color .example.dark {
     background-color: #47494d;
     color: #f7f7f7;
-    border-radius: 3px 3px 0 0; }
+    border-radius: 0 0 3px 3px; }
     .feedback-color .example.dark .color-values li {
       border-color: #5f6268; }
-  .feedback-color .example.light {
-    border-radius: 0 0 3px 3px;
-    background-color: #f7f7f7; }
 
 .feedback-color .example-content {
   border-radius: 3px;
