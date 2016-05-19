@@ -6,8 +6,8 @@
     <p>Place on Off-White backgrounds primarily.</p>
     ",
     "values": {
-      "Hex": "#00a5df",
-      "RGB": "0/165/223",
+      "Hex": "#00A5DF",
+      "RGB": "RGB(0, 165, 223)",
       "Sass": "$colorCorpHighlight",
       "CMYK": "92/0/6/0",
       "Pantone": "2995C"
@@ -20,10 +20,10 @@
     "desc": "<p>Dark grey is our primary text and logo color.</p>
     <p>In some cases used as background color</p>",
     "values": {
-      "Hex": "#47494d",
-      "RGB": "44/34/22/77",
+      "Hex": "#47494D",
+      "RGB": "RGB(71, 73, 77)",
       "Sass": "$colorDarkGrey",
-      "CMYK": "92/0/6/0",
+      "CMYK": "44/34/22/77",
       "Pantone": "Cool Gray 11C"
     },
     "example": "<p>Ahh a paragraph of text. The fundamental building block of text communication.</p>
