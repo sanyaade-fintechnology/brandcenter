@@ -46,3 +46,13 @@ h3, .h3 {
   font-size: 18px;
   line-height: 30px;
 }
+
+// links
+a {
+  color: $cta;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
