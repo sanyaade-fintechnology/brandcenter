@@ -42,7 +42,7 @@
 
 .primary-color {
   header {
-    display: flex;
+    @include display(flex);
     min-height: 6em;
 
     h4 {
