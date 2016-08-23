@@ -1,0 +1,57 @@
+/**
+ * Typography
+ */
+
+// Museo
+@font-face {
+  font-family: Museo;
+  src: url(https://static.sumup.com/fonts/western-latin/MuseoSans_300-webfont.woff);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Museo;
+  src: url(https://static.sumup.com//fonts/western-latin/MuseoSans_300_Italic-webfont.woff);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Museo;
+  src: url(https://static.sumup.com/fonts/western-latin/MuseoSans_500-webfont.woff);
+  font-weight: 500;
+}
+
+// Museo rounded
+@font-face {
+  font-family: "Museo Rounded";
+  src: url(https://static.sumup.com//fonts/western-latin/MuseoSansRounded-100-webfont.woff);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Museo Rounded";
+  src: url(https://static.sumup.com//fonts/western-latin/MuseoSansRounded-300-webfont.woff);
+  font-weight: 300;
+}
+
+/**
+ * Elements
+ */
+body {
+  font-family: Museo, Verdana, sans-serif;
+  font-weight: 300;
+  font-feature-settings: "liga" 1;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Museo Rounded", Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+h2, h3, h4 {
+  font-weight: 300;
+}

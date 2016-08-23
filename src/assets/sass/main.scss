@@ -1,44 +1,23 @@
 //-------------------------------------
-// Vendor Dependencies
-//-------------------------------------
-@import "bourbon/bourbon";
-@import "neat/neat-helpers";
-@import "global/_v2_grid_settings";
-@import "neat/neat";
-
-
-//-------------------------------------
-// Fonts
-//-------------------------------------
-
-@include font-face(museo, "https://static.sumup.com/fonts/western-latin/MuseoSans_300-webfont", 300);
-@include font-face(museo, "https://static.sumup.com//fonts/western-latin/MuseoSans_300_Italic-webfont", 300, italic);
-@include font-face(museo, "https://static.sumup.com//fonts/western-latin/MuseoSans_500-webfont", 500);
-@include font-face(museo-rounded, "https://static.sumup.com//fonts/western-latin/MuseoSansRounded-100-webfont", 100);
-@include font-face(museo-rounded, "https://static.sumup.com//fonts/western-latin/MuseoSansRounded-300-webfont", 300);
-@include font-face(sumup-icons, "https://static.sumup.com//fonts/icons/sumup-icons", 300);
-
-
-//-------------------------------------
 // SumUp global styles
 //-------------------------------------
-@import "global/_v2_colors";
-@import "global/_v2_helpers";
-@import "global/_v2_animate";
-@import "global/_v2_typography";
-@import "global/_v2_elements";
-@import "global/_v2_tables";
-@import "global/_v2_forms";
-@import "global/_v2_buttons";
-
+@import "styleguide/typography";
+// @import "global/_v2_colors";
+// @import "global/_v2_helpers";
+// @import "global/_v2_animate";
+// @import "global/_v2_elements";
+// @import "global/_v2_tables";
+// @import "global/_v2_forms";
+// @import "global/_v2_buttons";
+//
 //-------------------------------------
 // App specific partials
 //-------------------------------------
 
-@import "layout";
-@import "typography";
-@import "welcome";
-@import "logo-usage";
-@import "colors";
-@import "ui";
-@import "download";
+// @import "layout";
+// @import "typography";
+// @import "welcome";
+// @import "logo-usage";
+// @import "colors";
+// @import "ui";
+// @import "download";
