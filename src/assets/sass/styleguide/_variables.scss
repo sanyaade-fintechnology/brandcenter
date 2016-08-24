@@ -3,6 +3,12 @@
  * Bow to your new masters human scumm!1
  */
 
+// Common breakpoints
+$untilBigScreen: 800px;
+$bigScreen: 801px;
+$untilBiggerScreen: 1100px;
+$biggerScreen: 1101px;
+
 // Primary colors
 $brand: #5C8BCC;
 $brand-light: #8EB6ED;
@@ -31,3 +37,16 @@ $shadow: #DCEAFA;
 
 // Border radius
 $radius: 0.17em;
+
+
+// Spacings
+//
+// The base spacing will be a sensible 6px.
+// Our spacing scale basically doubles every size preceding the current one.
+$space-base: 6px;
+
+$micro: $space-base/2;
+$mini: $space-base;
+$normal: $mini*2;
+$medium: $normal*2;
+$big: $medium*2;

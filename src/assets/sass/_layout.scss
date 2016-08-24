@@ -1,0 +1,14 @@
+/**
+ *
+ * General page layout
+ */
+
+
+.page,
+.footer {
+  padding: $normal;
+
+  @media (min-width: $bigScreen) {
+    padding: $big;
+  }
+}
