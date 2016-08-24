@@ -1,12 +1,14 @@
 //-------------------------------------
 // Styleguide partials
 //-------------------------------------
+@import "styleguide/mixins";
 @import "styleguide/variables";
 @import "styleguide/typography";
 
 //-------------------------------------
 // Partials
 //-------------------------------------
+@import "shared";
 
 // @import "layout";
 // @import "typography";

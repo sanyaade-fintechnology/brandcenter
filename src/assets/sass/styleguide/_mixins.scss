@@ -1,0 +1,24 @@
+/**
+ *
+ * Library of mixins used throughout .. well everywhere :)
+ */
+
+@mixin shadowBox($color: $dark, $bg: $offwhite, $shadow: $shadow, $border: $light) {
+  position: relative;
+  border-bottom: 1px solid $border;
+  background-color: $bg;
+  color: $color;
+  border-radius: $radius;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 12px $shadow;
+    bottom: 0;
+    height: 20px;
+    width: 86%;
+    left: 7%;
+    border-radius: 86% / 20px;
+  }
+}
