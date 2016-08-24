@@ -4,12 +4,14 @@
 @import "styleguide/mixins";
 @import "styleguide/variables";
 @import "styleguide/typography";
+@import "styleguide/helpers";
 
 //-------------------------------------
 // Partials
 //-------------------------------------
 @import "shared";
 @import "layout";
+@import "footer";
 // @import "layout";
 // @import "typography";
 // @import "welcome";

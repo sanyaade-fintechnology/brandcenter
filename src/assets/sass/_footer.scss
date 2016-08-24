@@ -1,0 +1,17 @@
+/**
+ *
+ * Footer stuff
+ */
+
+
+.footer {
+  background-color: $dark;
+  color: white;
+  padding-bottom: $big;
+}
+
+.footer-links {
+  li {
+    margin-right: $mini;
+  }
+}

@@ -2,7 +2,24 @@
  * Stuff used througout the site
  */
 
+// logo definitions
+.logo {
+  width: 140px;
+  height: 37px;
+  fill: $dark;
 
+  @media (min-width: $bigScreen) {
+    width: 180px;
+    height: 48px;
+  }
+}
+
+.svg-logo {
+  width: 100%;
+  height: 100%;
+}
+
+// emphasize stuff
 em {
   @include shadowBox(white, $brand);
   font-style: normal;
@@ -11,6 +28,8 @@ em {
   line-height: 1.1em;
 }
 
+
+// browser text selection color
 ::selection {
   background: rgba($cta, 0.4); /* WebKit/Blink Browsers */
 }

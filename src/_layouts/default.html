@@ -10,9 +10,15 @@
   </head>
 
   <body>
+    {% include icons.html %}
+
     <div class="page">
-      <header class="main-header grid-container">
-        <a href="/" class="logo">{{ site.name }}</a>
+      <header class="page-header">
+        <a href="/" class="svg-logo" alt="{{ site.name }}">
+          <svg class="logo">
+            <use xlink:href="#logo" />
+          </svg>
+        </a>
       </header>
 
       <div class="main">
