@@ -1,0 +1,37 @@
+/**
+ *
+ * Navigation
+ */
+
+.hamburger {
+  @include hamburger();
+
+  @media (min-width: $bigScreen) {
+    display: none;
+  }
+}
+
+// navigation link-list layout
+.navigation {
+  // first level li's
+  ul li {
+    margin-top: $normal;
+  }
+
+  li ul {
+    padding-left: $normal;
+  }
+}
+
+// desktop layout
+@media (min-width: $bigScreen) {
+  .page {
+    display: flex;
+  }
+
+  .page-header {
+    margin-right: $big;
+    padding-right: $big;
+    border-right: 1px solid $border;
+  }
+}
