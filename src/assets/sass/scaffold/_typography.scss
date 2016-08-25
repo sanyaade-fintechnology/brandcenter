@@ -48,6 +48,8 @@ h4, .h4 {
   color: $brand;
   font-weight: 300;
   letter-spacing: 0.03em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 h3, .h3 {
@@ -63,4 +65,10 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+// paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: 0.8em;
 }

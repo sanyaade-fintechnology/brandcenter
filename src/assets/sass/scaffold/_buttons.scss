@@ -1,0 +1,21 @@
+/**
+ * The buttons!
+ *
+ * All hail the buttons! :)
+ */
+
+.button {
+  transition: background-color .2s;
+  background-color: $cta;
+  color: white;
+  padding: 1em 1.4em;
+  border-radius: $radius;
+  line-height: 1em;
+  text-decoration: none;
+  appearance: none;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $cta-dark;
+  }
+}

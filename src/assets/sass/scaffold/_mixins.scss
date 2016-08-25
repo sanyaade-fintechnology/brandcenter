@@ -9,6 +9,7 @@
   background-color: $bg;
   color: $color;
   border-radius: $radius;
+  display: block;
 
   &:before {
     content: "";

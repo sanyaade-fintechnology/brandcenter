@@ -1,0 +1,60 @@
+/**
+ * Logo display
+ */
+
+figure.logo-usage {
+  margin-bottom: $normal;
+
+  &.light .fake-hero {
+    background-color: $light;
+    fill: $dark;
+  }
+
+  &.dark .fake-hero {
+    background-color: $dark;
+    fill: $light;
+  }
+
+  .svg-logo {
+    width: 140px;
+    height: 40px;
+    margin-bottom: $medium;
+    display: block;
+  }
+}
+
+.fake-hero {
+  padding: $medium;
+  border-radius: $radius;
+}
+
+.fake-paragraphs {
+  p {
+    text-indent: -9999px;
+    width: 50%;
+    background-color: $grey;
+    line-height: 1em;
+    border-radius: 1px;
+
+    &:first-child { width: 65% }
+    &:last-child { width: 55%; margin-bottom: 0 }
+  }
+}
+
+.fake-button {
+  display: inline-block;
+  margin-top: $medium;
+}
+
+@media (min-width: $bigScreen) {
+  .logo-usage-examples {
+    display: flex;
+  }
+
+  .logo-usage {
+    flex-grow: 1;
+
+    &:first-of-type { padding-right: $normal }
+    &:last-of-type { padding-left: $normal }
+  }
+}

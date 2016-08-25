@@ -1,22 +1,25 @@
-//-------------------------------------
-// Styleguide partials
-//-------------------------------------
-@import "styleguide/mixins";
-@import "styleguide/variables";
-@import "styleguide/typography";
-@import "styleguide/helpers";
+/**
+ * SumUp Scaffold
+ *
+ * Bring up guys!
+ */
+@import "scaffold/mixins";
+@import "scaffold/variables";
+@import "scaffold/typography";
+@import "scaffold/helpers";
+@import "scaffold/buttons";
 
-//-------------------------------------
-// Partials
-//-------------------------------------
-@import "shared";
+/**
+ * Sitewide stuff
+ */
+@import "common";
 @import "layout";
 @import "nav";
 @import "footer";
-// @import "layout";
-// @import "typography";
-// @import "welcome";
-// @import "logo-usage";
-// @import "colors";
-// @import "ui";
-// @import "download";
+
+
+/**
+ * Sections
+ */
+
+@import "sections/design/logo";

@@ -29,6 +29,11 @@ em {
   line-height: 1.1em;
 }
 
+strong {
+  font-weight: 500;
+  font-style: normal;
+}
+
 
 // browser text selection color
 ::selection {
@@ -37,4 +42,15 @@ em {
 
 ::-moz-selection {
   background: rgba($cta, 0.4); /* Gecko Browsers */
+}
+
+
+// figures
+figure {
+  figcaption {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: $micro;
+  }
 }

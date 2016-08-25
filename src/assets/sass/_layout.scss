@@ -17,3 +17,15 @@
 .page {
   background-color: $offwhite;
 }
+
+.main {
+  @media (min-width: $bigScreen) {
+    flex-grow: 1;
+
+    h1:first-child { margin-top: -0.3em }
+
+    p {
+      max-width: 45em; // set a max-width for readability
+    }
+  }
+}
