@@ -3,15 +3,6 @@
  * Navigation
  */
 
-.hamburger {
-  @include hamburger();
-
-
-  @media (min-width: $bigScreen) {
-    display: none;
-  }
-}
-
 // navigation link-list layout
 .navigation {
   // first level li's
@@ -35,6 +26,7 @@
   }
 
   .hamburger {
+    @include hamburger($dark);
     padding: $mini;
     line-height: 1em;
   }
@@ -71,6 +63,8 @@
 
 // desktop layout
 @media (min-width: $bigScreen) {
+  .hamburger {display: none}
+
   .page {
     display: flex;
   }
