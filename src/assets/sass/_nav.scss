@@ -6,6 +6,7 @@
 .hamburger {
   @include hamburger();
 
+
   @media (min-width: $bigScreen) {
     display: none;
   }
@@ -14,12 +15,57 @@
 // navigation link-list layout
 .navigation {
   // first level li's
-  ul li {
-    margin-top: $normal;
+  & > ul > li {
+    padding-bottom: $normal;
   }
 
-  li ul {
+  // indent 2nd level or deeper
+  li ul li ul {
     padding-left: $normal;
+    font-size: 0.8em;
+  }
+}
+
+// mobile layout
+@media (max-width: $untilBigScreen) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    padding: $mini;
+    line-height: 1em;
+  }
+
+  .navigation {
+    transition: box-shadow .3s .15s, transform .2s;
+    position: absolute;
+    min-height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 75vw;
+    padding: $normal;
+    background-color: $dark;
+    color: white;
+    transform: translateX(-100%);
+    font-size: 16px;
+
+    &.showing {
+      box-shadow: 5px 0 45px rgba($dark, .5);
+      transform: translateX(0);
+    }
+
+    a {
+      display: block;
+      padding: .3em;
+    }
+
+    & > ul > li > a {
+      color: white;
+    }
   }
 }
 
@@ -33,5 +79,14 @@
     margin-right: $big;
     padding-right: $big;
     border-right: 1px solid $border;
+  }
+
+  .navigation {
+    margin-top: $normal;
+
+    & > ul > li > a {
+      color: $dark;
+      font-weight: 500;
+    }
   }
 }

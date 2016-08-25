@@ -1,4 +1,4 @@
-name: SumUp Brand Center
+name: SumUp brandbook
 exclude: [node_modules, gulpfile.js]
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants

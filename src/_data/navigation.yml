@@ -10,6 +10,9 @@
   subitems:
     - text: Logo
       url: /design/index.html
+      subitems:
+        - text: Something
+          url: /design/index.html
     - text: Colors
       url: /design/colors.html
     - text: Typography

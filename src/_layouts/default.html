@@ -13,23 +13,7 @@
     {% include icons.html %}
 
     <div class="page">
-      <header class="page-header">
-        <a href="/" class="svg-logo" alt="{{ site.name }}">
-          <svg class="logo">
-            <use xlink:href="#logo" />
-          </svg>
-        </a>
-
-        <div class="hamburger hamburger--spin">
-          <div class="hamburger-box">
-            <div class="hamburger-inner"></div>
-          </div>
-        </div>
-
-        <nav class="navigation">
-          {% include nav.html nav=site.data.navigation %}
-        </nav>
-      </header>
+      {% include header.html %}
 
       <div class="main">
         {{ content }}
@@ -37,5 +21,8 @@
     </div>
 
     {% include footer.html %}
+
+    <script src="/assets/js/helpers.js" charset="utf-8"></script>
+    <script src="/assets/js/brandbook.js" charset="utf-8"></script>
   </body>
 </html>

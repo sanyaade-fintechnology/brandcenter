@@ -1,0 +1,17 @@
+<header class="page-header">
+  <a href="/" class="logo" alt="{{ site.name }}">
+    <svg class="svg-logo">
+      <use xlink:href="#logo" />
+    </svg>
+  </a>
+
+  <a href="#" id="toggle-menu" class="hamburger hamburger--spin">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </a>
+
+  <nav id="main-nav" class="navigation">
+    {% include nav.html nav=site.data.navigation %}
+  </nav>
+</header>
