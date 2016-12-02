@@ -3,36 +3,36 @@
  */
 
 figure.logo-usage {
-  margin-bottom: $normal;
+  margin-bottom: $spacing-m;
 
   &.light .fake-hero {
-    background-color: $light;
-    fill: $dark;
+    background-color: $color-light;
+    fill: $color-dark;
   }
 
   &.dark .fake-hero {
-    background-color: $dark;
-    fill: $light;
+    background-color: $color-dark;
+    fill: $color-light;
   }
 
   .svg-logo {
     width: 150px;
     height: 40px;
-    margin-bottom: $medium;
+    margin-bottom: $spacing-m;
     display: block;
   }
 }
 
 .fake-hero {
-  padding: $medium;
-  border-radius: $radius;
+  padding: $spacing-m;
+  border-radius: $border-radius;
 }
 
 .fake-paragraphs {
   p {
     text-indent: -9999px;
     width: 50%;
-    background-color: $grey;
+    background-color: $color-medium;
     line-height: 1em;
     border-radius: 1px;
 
@@ -43,12 +43,12 @@ figure.logo-usage {
 
 .fake-button {
   display: inline-block;
-  margin-top: $medium;
+  margin-top: $spacing-m;
   text-indent: -9999px;
   min-width: 100px;
 }
 
-@media (min-width: $bigScreen) {
+@media (min-width: $big-screens) {
   .logo-usage-examples {
     display: flex;
   }
@@ -56,7 +56,7 @@ figure.logo-usage {
   .logo-usage {
     flex-grow: 1;
 
-    &:first-of-type { padding-right: $normal }
-    &:last-of-type { padding-left: $normal }
+    &:first-of-type { padding-right: $spacing-m }
+    &:last-of-type { padding-left: $spacing-m }
   }
 }

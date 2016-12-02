@@ -25,6 +25,7 @@
     "gulp-sass": "^2.3.1",
     "gulp-shell": "^0.5.2",
     "gulp-size": "^2.1.0",
-    "lodash": "^4.11.1"
+    "lodash": "^4.11.1",
+    "node-normalize-scss": "^1.4.0"
   }
 }

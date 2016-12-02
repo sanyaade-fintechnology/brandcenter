@@ -6,20 +6,20 @@
 
 .page,
 .footer {
-  padding: $normal;
+  padding: $spacing-m;
   box-sizing: border-box;
 
-  @media (min-width: $bigScreen) {
-    padding: $big;
+  @media (min-width: $big-screens) {
+    padding: $spacing-l;
   }
 }
 
 .page {
-  background-color: $offwhite;
+  background-color: $color-off;
 }
 
 .main {
-  @media (min-width: $bigScreen) {
+  @media (min-width: $big-screens) {
     flex-grow: 1;
 
     h1:first-child { margin-top: -0.3em }

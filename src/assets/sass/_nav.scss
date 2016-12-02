@@ -7,29 +7,28 @@
 .navigation {
   // first level li's
   & > ul > li {
-    padding-bottom: $normal;
+    padding-bottom: $spacing-m;
   }
 
   // indent 2nd level or deeper
   li ul li ul {
-    padding-left: $normal;
+    padding-left: $spacing-m;
     font-size: 0.8em;
   }
 }
 
 // mobile layout
-@media (max-width: $untilBigScreen) {
+@media (max-width: $until-big-screens) {
   .page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .hamburger {
-    @include hamburger($dark);
-    padding: $mini;
-    line-height: 1em;
-  }
+  // .hamburger {
+  //   padding: $mini;
+  //   line-height: 1em;
+  // }
 
   .navigation {
     transition: box-shadow .3s .15s, transform .2s;
@@ -39,14 +38,14 @@
     top: 0;
     left: 0;
     width: 75vw;
-    padding: $normal;
-    background-color: $dark;
+    padding: $spacing-m;
+    background-color: $color-dark;
     color: white;
     transform: translateX(-100%);
     font-size: 16px;
 
     &.showing {
-      box-shadow: 5px 0 45px rgba($dark, .5);
+      box-shadow: 5px 0 45px rgba($color-dark, .5);
       transform: translateX(0);
     }
 
@@ -62,24 +61,22 @@
 }
 
 // desktop layout
-@media (min-width: $bigScreen) {
-  .hamburger {display: none}
+@media (min-width: $big-screens) {
+  .hamburger { display: none }
 
-  .page {
-    display: flex;
-  }
+  .page { display: flex }
 
   .page-header {
-    margin-right: $big;
-    padding-right: $big;
-    border-right: 1px solid $border;
+    margin-right: $spacing-l;
+    padding-right: $spacing-l;
+    border-right: 1px solid $color-light;
   }
 
   .navigation {
-    margin-top: $big;
+    margin-top: $spacing-l;
 
     & > ul > li > a {
-      color: $dark;
+      color: $color-dark;
       font-weight: 500;
     }
   }
