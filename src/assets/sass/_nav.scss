@@ -27,12 +27,6 @@
 
 // mobile layout
 @include media($until-big-screens) {
-  .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .hamburger {
     z-index: 20;
     position: relative;
@@ -61,14 +55,6 @@
 // desktop layout
 @include media($big-screens) {
   .hamburger { display: none }
-
-  .page { display: flex }
-
-  .page-header {
-    margin-right: $spacing-l;
-    padding-right: $spacing-l;
-    border-right: 1px solid $color-light;
-  }
 
   .navigation {
     margin-top: $spacing-l;
