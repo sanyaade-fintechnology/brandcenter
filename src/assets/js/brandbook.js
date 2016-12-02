@@ -5,11 +5,12 @@
  */
 
 var toggle = document.getElementById('toggle-menu'),
+    burgers = toggle.querySelectorAll('.hamburger'),
     mainNav = document.getElementById('main-nav');
 
 toggle.addEventListener('click', function(event) {
   event.preventDefault();
 
-  toggleClass(toggle, "is-active");
+  toggleClass(burgers[0], "is-active");
   toggleClass(mainNav, "showing");
 });
