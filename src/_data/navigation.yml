@@ -1,21 +1,13 @@
-- text: Overview
-  url: /brand/index.html
-  subitems:
-    - text: Introduction
-      url: /brand/index.html
-    - text: Brand
-      url: /brand/brand.html
+- text: Brand
+  url: /brand
 - text: Design
-  url: /design/index.html
+  url: /design
   subitems:
     - text: Logo
-      url: /design/index.html
-      subitems:
-        - text: Something
-          url: /design/index.html
+      url: /design/logo
     - text: Colors
-      url: /design/colors.html
+      url: /design/colors
     - text: Typography
-      url: /design/typography.html
-    - text: UI Elements
-      url: /design/ui-elements.html
+      url: /design/typography
+    - text: Imagery
+      url: /design/imagery

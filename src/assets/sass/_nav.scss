@@ -5,6 +5,8 @@
 
 // navigation link-list layout
 .navigation {
+  a { display: block }
+
   // first level li's
   & > ul > li {
     padding-bottom: $spacing-m;
@@ -14,6 +16,12 @@
   li ul li ul {
     padding-left: $spacing-m;
     font-size: 0.8em;
+  }
+
+  // first level main nav items are dark
+  & > ul > li > a {
+    color: $color-dark;
+    font-weight: 500;
   }
 }
 
@@ -25,38 +33,28 @@
     align-items: center;
   }
 
-  // .hamburger {
-  //   padding: $mini;
-  //   line-height: 1em;
-  // }
+  .hamburger {
+    z-index: 20;
+    position: relative;
+  }
 
   .navigation {
-    transition: box-shadow .3s .15s, transform .2s;
+    transition: box-shadow .4s .15s, transform .5s;
     position: absolute;
-    min-height: 100vh;
-    z-index: 100;
+    z-index: 10;
     top: 0;
     left: 0;
-    width: 75vw;
+    right: 0;
     padding: $spacing-m;
-    background-color: $color-dark;
-    color: white;
-    transform: translateX(-100%);
-    font-size: 16px;
+    background-color: $color-white;
+    transform: translateY(-100%);
 
     &.showing {
-      box-shadow: 5px 0 45px rgba($color-dark, .5);
-      transform: translateX(0);
+      box-shadow: 0px 5px 45px rgba($color-dark, .5);
+      transform: translateY(0);
     }
 
-    a {
-      display: block;
-      padding: .3em;
-    }
-
-    & > ul > li > a {
-      color: white;
-    }
+    a { padding: .3em }
   }
 }
 
@@ -75,9 +73,6 @@
   .navigation {
     margin-top: $spacing-l;
 
-    & > ul > li > a {
-      color: $color-dark;
-      font-weight: 500;
-    }
+    a { margin-bottom: $spacing-xs }
   }
 }

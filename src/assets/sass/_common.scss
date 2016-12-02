@@ -59,4 +59,15 @@ figure {
 .unstyled {
   list-style: none;
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// headlines local styles
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  margin-top: 3rem;
+  margin-bottom: 1.8rem;
 }

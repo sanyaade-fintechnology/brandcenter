@@ -1,10 +1,19 @@
 /**
- *
  * General page layout
  */
 
+html {
+  height: 100%; // needed for sticky footer
+}
 
-.page,
+body { // needed for sticky footer
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100%;
+}
+
+.page-header,
+.main,
 .footer {
   padding: $spacing-m;
   box-sizing: border-box;
@@ -15,17 +24,33 @@
 }
 
 .page {
-  background-color: $color-off;
+  flex: 1; // needed for sticky footer
 }
 
 .main {
   @include media($big-screens) {
     flex-grow: 1;
+    padding-top: 0;
 
-    h1:first-child { margin-top: -0.3em }
+    h1:first-child { margin-top: -0.1em }
 
     p {
       max-width: 45em; // set a max-width for readability
     }
+  }
+}
+
+// sections
+.section-header {
+  @include fancy-shadow;
+  @include linear-gradient(to bottom, rgba(white, 0), $color-light);
+  margin-bottom: $spacing-s; // accomodate for the fancy shadow
+  margin-left: -$spacing-m; margin-right: -$spacing-m;
+  padding: $spacing-m;
+
+  @include media($big-screens) {
+    @include radial-gradient(circle farthest-corner at 80% 0, $color-light, white);
+    margin-left: -$spacing-l; margin-right: -$spacing-l;
+    padding: $spacing-l;
   }
 }
