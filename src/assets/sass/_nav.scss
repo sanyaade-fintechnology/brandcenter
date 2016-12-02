@@ -18,7 +18,7 @@
 }
 
 // mobile layout
-@media (max-width: $until-big-screens) {
+@include media($until-big-screens) {
   .page-header {
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,7 @@
 }
 
 // desktop layout
-@media (min-width: $big-screens) {
+@include media($big-screens) {
   .hamburger { display: none }
 
   .page { display: flex }

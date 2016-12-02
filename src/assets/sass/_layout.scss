@@ -9,7 +9,7 @@
   padding: $spacing-m;
   box-sizing: border-box;
 
-  @media (min-width: $big-screens) {
+  @include media($big-screens) {
     padding: $spacing-l;
   }
 }
@@ -19,7 +19,7 @@
 }
 
 .main {
-  @media (min-width: $big-screens) {
+  @include media($big-screens) {
     flex-grow: 1;
 
     h1:first-child { margin-top: -0.3em }

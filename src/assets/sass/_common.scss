@@ -9,7 +9,7 @@
   height: 37px;
   fill: $color-dark;
 
-  @media (min-width: $big-screens) {
+  @include media($big-screens) {
     width: 160px;
     height: 42px;
   }
@@ -53,4 +53,10 @@ figure {
     font-weight: 500;
     margin-bottom: $spacing-xs;
   }
+}
+
+// lists
+.unstyled {
+  list-style: none;
+  padding-left: 0;
 }
