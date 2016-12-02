@@ -1,0 +1,3 @@
+[submodule "src/assets/sass/brand-styles"]
+	path = src/assets/sass/brand-styles
+	url = git@github.com:sumup/brand-styles.git
