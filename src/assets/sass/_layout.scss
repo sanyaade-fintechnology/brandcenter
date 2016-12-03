@@ -53,6 +53,7 @@ body { // needed for sticky footer
     &:before {
       // used to push out .main to where it
       // were without the sidebar being pos: fixed
+      @include flex-shrink(0);
       content: "";
       width: $desktopSidebarWidth;
       display: block;
