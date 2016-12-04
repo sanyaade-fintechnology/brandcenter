@@ -20,21 +20,6 @@
   height: 100%;
 }
 
-// emphasize stuff
-em {
-  background-color: $color-brand;
-  font-style: normal;
-  display: inline-block;
-  padding: 0 .2em;
-  line-height: 1.1em;
-}
-
-strong {
-  font-weight: 500;
-  font-style: normal;
-}
-
-
 // browser text selection color
 ::selection {
   background: rgba($color-highlight, 0.4); /* WebKit/Blink Browsers */
