@@ -10,8 +10,9 @@
   padding-bottom: $spacing-l;
 }
 
-.footer-links {
-  li {
-    margin-right: $spacing-s;
+.footer__links {
+  a {
+    display: inline-block;
+    margin-right: $spacing-m;
   }
 }
