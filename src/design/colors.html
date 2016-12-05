@@ -6,3 +6,68 @@ title: Colors
 <header class="section-header">
   <h1>Colors</h1>
 </header>
+
+<section class="colors colors--primary">
+  <h3>Primary Colors</h3>
+
+  <div class="color-group">
+    <article>
+      <h4>Brand</h4>
+
+      {% include snippets/color-swatches.html data=site.data.colors.primary.brand %}
+    </article>
+
+    <article>
+      <h4>Highlight</h4>
+      {% include snippets/color-swatches.html data=site.data.colors.primary.highlight %}
+    </article>
+  </div>
+</section>
+
+<section class="colors colors--attention">
+  <h3>Attention Colors</h3>
+
+  <div class="color-group">
+    <article>
+      <h4>Danger</h4>
+
+      {% include snippets/color-swatches.html data=site.data.colors.attention.danger %}
+    </article>
+
+    <article>
+      <h4>Warning</h4>
+
+      {% include snippets/color-swatches.html data=site.data.colors.attention.warning %}
+    </article>
+  </div>
+</section>
+
+<section class="colors colors--greys">
+  <h3>Attention Colors</h3>
+
+  <div class="color-group">
+    <article>
+      <h4>Dark</h4>
+
+      {% include snippets/color-swatches.html data=site.data.colors.greys.dark %}
+    </article>
+
+    <article>
+      <h4>Medium</h4>
+
+      {% include snippets/color-swatches.html data=site.data.colors.greys.medium %}
+    </article>
+
+    <article>
+      <h4>Light</h4>
+
+      {% include snippets/color-swatches.html data=site.data.colors.greys.light %}
+    </article>
+
+    <article>
+      <h4>Off-white</h4>
+
+      {% include snippets/color-swatches.html data=site.data.colors.greys.offwhite %}
+    </article>
+  </div>
+</section>
