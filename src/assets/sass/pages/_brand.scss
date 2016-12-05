@@ -3,17 +3,25 @@
     @include display(flex);
     align-items: center;
     justify-content: center;
-    font-size: 7.5vw;
+    font-size: 6vw;
     line-height: 1.1em;
 
-    @include media($big-screens) { justify-content: flex-start }
+    @include media($until-medium-screens) { font-size: 10vw }
 
-    @include media($huge-screens) { font-size: 96px }
+    @include media($big-screens) {
+      padding: $spacing-l;
+      border: 1px solid $color-light;
+    }
+
+    @include media($huge-screens) { font-size: 60px }
   }
 
   .display__label {
     margin-right: 3vw;
     color: $color-brand;
+
+    @include media($big-screens) { font-size: 4vw }
+    @include media($huge-screens) { font-size: 40px }
   }
 
   .display__keyword {
@@ -99,6 +107,16 @@
     em {
       font-size: 6vw;
       @include media($big-screens) { @include type-xxl }
+    }
+  }
+}
+
+.brand-identity__content {
+  @include media($big-screens) {
+    @include display(flex);
+
+    article:not(:last-child) {
+      padding-right: $spacing-m;
     }
   }
 }

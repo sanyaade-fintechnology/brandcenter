@@ -69,12 +69,17 @@ body { // needed for sticky footer
     max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
-
-    p { max-width: 45em } // set a max-width for readability
   }
 }
 
 // sections
 .section-header {
+  article.intro {
+    p:first-child { margin-top: 0 }
 
+    @include media($big-screens) {
+      @include column-count(2);
+      @include column-fill(balance);
+    }
+  }
 }

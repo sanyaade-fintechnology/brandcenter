@@ -5,26 +5,82 @@ title: Logo
 
 <header class="section-header">
   <h1>Logo</h1>
-  <p>Our <em>brand mark</em> can be found … well about everywhere in the SumUp world and on anything, anyone could ever think to print or display a logo.</p>
-  <p>We show it proudly on every piece of packaging, marketing materials, it's the proud sponsor of our app icons, websites, handbooks … the liist goes on – you get the picture.</p>
 
-  <p><strong>All this is the reason why we have to treat our logo with the utmost respect and care.</strong></p>
+  <article class="intro">
+    <p>Our <em>brand mark</em> can be found everywhere in the SumUp world and on anything, anyone could ever think to print or display a logo.</p>
+    <p>We show it proudly on every piece of packaging, marketing materials, it's the proud sponsor of our app icons, websites, handbooks … the list goes on – you get the picture.</p>
+  </article>
 </header>
 
+<section id="logo-construction">
+  <img src="/assets/images/content/logo/logo-construction.svg" alt="Logo construction">
+</section>
+
 <section id="logo-usage">
-  <h3>How to use the logo</h3>
+  <h3>Logo Usage</h3>
 
   <div class="logo-usage-examples">
     <figure class="logo-usage light">
-      <figcaption>Dark Logo on light background</figcaption>
-
       {% include snippets/fake-hero.html %}
+      <figcaption>Dark logo on light background</figcaption>
+    </figure>
+
+    <figure class="logo-usage brand">
+      {% include snippets/fake-hero.html %}
+      <figcaption>White logo on brand background</figcaption>
     </figure>
 
     <figure class="logo-usage dark">
-      <figcaption>Dark Logo on light background</figcaption>
-
       {% include snippets/fake-hero.html %}
+      <figcaption>White logo on dark background</figcaption>
     </figure>
   </div>
+</section>
+
+<section id="logo-social-media">
+  <h3>Squares and circles</h3>
+
+  <p>We all know how social media platforms love to force avatars and logos into symmetric shapes like squares or circles. In such cases we show just the SumUp icon and provide it with clear space, taken from the half-circle cut-out.</p>
+
+  <div class="logos-in-boxes">
+    <figure>
+      {% assign caption = "Clear space in square" %}
+      <div class="logo-wrap square">
+        <img src="/assets/images/content/logo/logo-social-clearspace.svg" alt="{{ caption }}">
+      </div>
+      <figcaption>{{ caption }}</figcaption>
+    </figure>
+
+    <figure>
+      {% assign caption = "Clear space in rounded square" %}
+      <div class="logo-wrap rounded-square">
+        <img src="/assets/images/content/logo/logo-social-clearspace.svg" alt="{{ caption }}">
+      </div>
+      <figcaption>{{ caption }}</figcaption>
+    </figure>
+
+    <figure>
+      {% assign caption = "Clear space in circles" %}
+      <div class="logo-wrap circle">
+        <img src="/assets/images/content/logo/logo-social-clearspace.svg" alt="{{ caption }}">
+      </div>
+      <figcaption>{{ caption }}</figcaption>
+    </figure>
+
+    <figure class="logo-social-dummy">
+      {% assign caption = "Result" %}
+      <div class="logo-wrap result">
+        <img src="/assets/images/content/logo/logo-social-clearspace-clean.svg" alt="{{ caption }}">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section id="logo-co-branding">
+  <h3>Logo Co-branding guidelines</h3>
+
+  <figure>
+    <img src="/assets/images/content/logo/logo-co-branding.svg" alt="Logo construction">
+    <figcaption>When shown together on a co-branded product/campaign, the height and width of the partner logo never exceed the dimensions of our own logo.</figcaption>
+  </figure>
 </section>

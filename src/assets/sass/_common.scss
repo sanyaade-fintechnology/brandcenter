@@ -29,17 +29,6 @@
   background: rgba($color-highlight, 0.4); /* Gecko Browsers */
 }
 
-
-// figures
-figure {
-  figcaption {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: $spacing-xs;
-  }
-}
-
 // lists
 .unstyled {
   list-style: none;
@@ -55,4 +44,9 @@ h3, .h3,
 h4, .h4 {
   margin-top: 3rem;
   margin-bottom: 1.8rem;
+}
+
+// figures
+figcaption {
+  margin-top: $spacing-m;
 }
