@@ -1,7 +1,7 @@
 - text: Brand
-  url: /brand
+  url: /
 - text: Design
-  url: /design
+  url: /design/logo
   subitems:
     - text: Logo
       url: /design/logo

@@ -1,8 +1,64 @@
 ---
 layout: default
-title: Welcome!
+title: Brand
 ---
 
 <header class="section-header">
-  <h1>Welcome to the <em>new</em> SumUp 🎉🖖🏼</h1>
+  <h1>Brand</h1>
+
+  <article class="intro">
+    <p>We do things <em>differently</em>. We built our <em>own payment solution</em> end-to-end so that we can always offer the best value & service. We solve problems with technology, not by throwing money at them. <em>We design and make our own devices</em>, so we are sure that they will work seamlessly with our app. Our focus is small business, we know how vital payment is to them, so we listen to feedback and continuously improve.</p>
+  </article>
 </header>
+
+<section class="we-are">
+  <h2 class="display-headline">
+    <span class="display__label">We are</span>
+    <div>
+      <span class="display__keyword">Innovative.</span>
+      <span class="display__keyword">Intuitive.</span>
+      <span class="display__keyword">Inclusive.</span>
+    </div>
+  </h2>
+</section>
+
+<section id="brand-tone">
+  <h2>Tone</h2>
+
+  <figure class="brand-tone">
+    <ul class="unstyled">
+      {% for line in site.data.brand.tone %}
+      <li class="tone-line">
+        <h4>{{ line.headline }}</h4>
+        <div class="tone-spectrum">
+          <span class="spectrum-begin">{{ line.spectrum.start }}</span>
+          <span class="spectrum-hit" style="position: relative; left: {{ line.offset }}"><em>{{ line.spectrum.hit }}</em></span>
+          <span class="spectrum-end">{{ line.spectrum.end }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </figure>
+</section>
+
+<section id="brand-identity">
+  <h2>Identity</h2>
+
+  <div class="brand-identity__content">
+    <article>
+      <h3>Innovative</h3>
+      <p>We built our payment service from scratch to shake up the industry and wake up the entrepreneur within anyone. We created a unique device that works with the smartphone that’s in your pocket, allows you to accept card payments anywhere.</p>
+    </article>
+
+    <article>
+      <h3>Innovative</h3>
+      <p>We built our payment service from scratch to shake up the industry and wake up the entrepreneur within anyone. We created a unique device that with the smartphone that’s in your pocket, allows you to accept card payments anywhere.</p>
+    </article>
+
+    <article>
+      <h3>Intuitive</h3>
+      <p>Whether you are brewing coffee or fixing cars, we want to make technology that everyone knows how to use. From our paperless signup to taking your first payment, we make it easy. So you can get on with doing what you do best.</p>
+    </article>
+  </div>
+
+</section>
