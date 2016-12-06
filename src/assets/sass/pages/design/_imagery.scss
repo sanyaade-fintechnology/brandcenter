@@ -28,7 +28,7 @@
 .icons-overview {
   @include media($big-screens) {
     padding: $spacing-xl;
-    background-color: $color-off;
+    background-color: $color-white;
     border: 1px solid $color-light;
   }
 }
