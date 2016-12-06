@@ -12,6 +12,7 @@ body { // needed for sticky footer
   @include display(flex);
   @include flex-direction(column);
   min-height: 100%;
+  background-color: $color-off;
 }
 
 .page-header,
@@ -46,7 +47,6 @@ body { // needed for sticky footer
 
 .page {
   @include flex(1); // needed for sticky footer
-  background-color: $color-off;
 
   @include media($big-screens) {
     @include display(flex);
