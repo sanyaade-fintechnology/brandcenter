@@ -1,0 +1,26 @@
+display:
+  type-xxxxl:
+    spec: 44pt / 54pt line height
+    text: I'm an XXXXL headline. Boom.
+  type-xxxl:
+    spec: 40pt / 48pt line height
+    text: Still huge dude. I mean XXXL … right?
+  type-xxl:
+    spec: 32pt / 48pt line height
+    text: Humble bumble being quite modest over here
+  type-xl:
+    spec: 24pt / 24pt line height
+    text: If you need something a bit more important
+text:
+  type-l:
+    spec: 18pt / 24pt line height
+    text: Yeah so I'm the biggest one using Museo Sans
+  type-m:
+    spec: 14pt / 24pt line height
+    text: Ahh the regular copy text style
+  type-s:
+    spec: 12pt / 18pt line height
+    text: Getting smaller here. Not tiny, but hey people need small text
+  type-xs:
+    spec: 10pt / 18pt line height
+    text: Sadly, I'm usually used for the stuff that you're not supposed to read …

@@ -75,11 +75,10 @@ body { // needed for sticky footer
 // sections
 .section-header {
   article.intro {
-    p:first-child { margin-top: 0 }
+    p { margin-top: 0 }
 
     @include media($big-screens) {
       @include column-count(2);
-      @include column-fill(balance);
     }
   }
 }

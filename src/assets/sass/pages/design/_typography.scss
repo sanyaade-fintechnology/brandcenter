@@ -1,0 +1,39 @@
+.specimen-wrap {
+  &:not(:last-child) {
+    @include fancy-shadow;
+    background-color: white;
+    padding-bottom: $spacing-xl;
+  }
+}
+
+.specimen {
+  @include media($big-screens) {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+}
+
+.specimen__spec {
+  @include type-m;
+  color: $color-brand;
+
+  @include media($until-big-screens) {
+    display: block;
+  }
+
+  & > span { display: block }
+  .monospace {
+    font-family: Inconsolata, Menlo, Monaco, monospace;
+    color: $color-dark;
+    background-color: $color-light;
+    padding: 2px 3px;
+    border-radius: $border-radius;
+  }
+}
+
+.specimen__sample-text {
+  border: 1px solid $color-highlight-lighter;
+  background-color: rgba($color-highlight-lighter, .1);
+  border-radius: $border-radius;
+}
