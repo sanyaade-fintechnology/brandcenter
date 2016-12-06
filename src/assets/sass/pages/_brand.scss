@@ -30,30 +30,15 @@
 }
 
 .brand-tone {
-  background-color: $color-dark;
-  padding: $spacing-s;
-  color: $color-off;
-
-  @include media($until-big-screens) {
-    margin-left: -$spacing-m;
-    margin-right: -$spacing-m;
-  }
-
-  @include media($big-screens) {
-    border-radius: $border-radius;
-  }
-
-  @include media($huge-screens) {
-    margin-left: -$spacing-l;
-    margin-right: -$spacing-l;
-    padding: $spacing-l;
-  }
+  background-color: $color-light;
+  padding: $spacing-m;
+  border-radius: $border-radius;
 
   .tone-line {
     &:not(:last-child) {
       margin-bottom: $spacing-l;
       padding-bottom: $spacing-m;
-      border-bottom: 1px solid darken($color-dark, 3%)
+      border-bottom: 1px solid $color-medium;
     }
 
     h4 {
@@ -91,8 +76,8 @@
     }
 
     span {
-      background-color: $color-dark;
-      box-shadow: 0 0 10px $color-dark;
+      background-color: $color-light;
+      box-shadow: 0 0 10px $color-light;
       line-height: 1;
       position: relative;
       z-index: 10;
