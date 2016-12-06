@@ -24,3 +24,7 @@ text:
   type-xs:
     spec: 10pt / 18pt line height
     text: Sadly, I'm usually used for the stuff that you're not supposed to read …
+weights:
+  type-light: Aa
+  type-regular: Aa
+  type-medium: Aa

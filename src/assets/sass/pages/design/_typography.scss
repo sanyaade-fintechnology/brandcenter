@@ -1,3 +1,30 @@
+// Weights
+.type-weights-wrap {
+  @include display(flex);
+}
+
+.type-weight {
+  @include fancy-shadow;
+  text-align: center;
+  margin-right: $spacing-l;
+
+  span { display: block }
+
+  .monospace {
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}
+
+.type-weight__sample {
+  @include type-xxxl;
+  display: block;
+  padding: $spacing-l;
+  border: 1px solid $color-light;
+  border-bottom: none;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+// Styles
 .specimen-wrap {
   &:not(:last-child) {
     @include fancy-shadow;
@@ -23,13 +50,6 @@
   }
 
   & > span { display: block }
-  .monospace {
-    font-family: Inconsolata, Menlo, Monaco, monospace;
-    color: $color-dark;
-    background-color: $color-light;
-    padding: 2px 3px;
-    border-radius: $border-radius;
-  }
 }
 
 .specimen__sample-text {

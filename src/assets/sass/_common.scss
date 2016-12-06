@@ -50,3 +50,13 @@ h4, .h4 {
 figcaption {
   margin-top: $spacing-m;
 }
+
+// code
+.monospace {
+  @include type-m;
+  font-family: Inconsolata, Menlo, Monaco, monospace;
+  color: $color-dark;
+  background-color: $color-light;
+  padding: 2px 3px;
+  border-radius: $border-radius;
+}

@@ -12,8 +12,21 @@ title: Typography
   </article>
 </header>
 
+<section id="type-weights">
+  <h3>Weights</h3>
+
+  <div class="type-weights-wrap">
+    {% for weight in site.data.typography.weights %}
+      <figure class="type-weight">
+        <span class="type-weight__sample {{ weight[0] }}">{{ weight[1] }}</span>
+        <span class="monospace">.{{ weight[0] }}</span>
+      </figure>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="type-specimen">
-  <h3>Variants</h3>
+  <h3>Styles</h3>
 
   <figure class="specimen-wrap">
     {% include snippets/type-specimen.html data=site.data.typography.display %}
