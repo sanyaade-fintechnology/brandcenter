@@ -7,22 +7,11 @@
 .navigation {
   font-family: $font-family-display;
 
-  a { display: block }
+  .list:not(:last-child) { margin-bottom: $spacing-l }
 
-  // first level li's
-  & > ul > li {
-    padding-bottom: $spacing-m;
-  }
-
-  // indent 2nd level or deeper
-  li ul li ul {
-    padding-left: $spacing-m;
-    font-size: 0.8em;
-  }
-
-  // first level main nav items are dark
-  & > ul > li > a {
-    font-weight: $font-weight-medium;
+  li {
+    padding: $spacing-xs 0;
+    line-height: 1;
   }
 }
 
@@ -48,8 +37,6 @@
       box-shadow: 0px 5px 45px rgba($color-dark, .5);
       transform: translateY(0);
     }
-
-    a { padding: .3em }
   }
 }
 
@@ -59,7 +46,5 @@
 
   .navigation {
     margin-top: $spacing-xxl;
-
-    a { margin-bottom: $spacing-s }
   }
 }
