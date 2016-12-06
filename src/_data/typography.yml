@@ -1,7 +1,7 @@
 display:
   type-xxxxl:
     spec: 44pt / 54pt line height
-    text: I'm an XXXXL headline. Boom.
+    text: I'm a XXXXL headline. Boom.
   type-xxxl:
     spec: 40pt / 48pt line height
     text: Still huge dude. I mean XXXL … right?
