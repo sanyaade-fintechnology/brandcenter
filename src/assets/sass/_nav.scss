@@ -5,6 +5,8 @@
 
 // navigation link-list layout
 .navigation {
+  font-family: $font-family-display;
+
   a { display: block }
 
   // first level li's
@@ -20,8 +22,7 @@
 
   // first level main nav items are dark
   & > ul > li > a {
-    color: $color-dark;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
   }
 }
 
@@ -57,8 +58,8 @@
   .hamburger { display: none }
 
   .navigation {
-    margin-top: $spacing-l;
+    margin-top: $spacing-xxl;
 
-    a { margin-bottom: $spacing-xs }
+    a { margin-bottom: $spacing-s }
   }
 }

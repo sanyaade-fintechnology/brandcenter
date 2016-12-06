@@ -74,11 +74,41 @@ body { // needed for sticky footer
 
 // sections
 .section-header {
-  article.intro {
+  .intro {
     p { margin-top: 0 }
 
     @include media($big-screens) {
       @include column-count(2);
+    }
+  }
+}
+
+.section {
+  margin-bottom: $spacing-l;
+
+  @include media($big-screens) { margin-bottom: $spacing-xl * 2 }
+
+  .intro {
+    h3 { margin-top: 0 }
+
+    p {
+      margin-top: 0;
+
+      &:last-child { margin-bottom: 0 }
+    }
+
+    @include media($big-screens) {
+      @include fancy-shadow;
+      max-width: 60%;
+      padding: $spacing-l;
+      background-color: $color-off;
+      border: 1px solid $color-light;
+      margin-bottom: $spacing-xl;
+      border-radius: $border-radius;
+    }
+
+    @include media($huge-screens) {
+      margin-left: -$spacing-l;
     }
   }
 }

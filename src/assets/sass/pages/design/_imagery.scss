@@ -1,0 +1,34 @@
+#imagery-renders .intro {
+  @include media($big-screens) {
+    max-width: 50%;
+  }
+}
+
+.renders-wrap {
+  max-width: 100%;
+
+  @include media($big-screens) {
+    margin-top: -60px;
+
+    img {
+      display: inline-block;
+
+      &.device-flying {
+        width: 60%;
+      }
+
+      &.device-frontal {
+        width: 40%;
+        margin-left: -50px;
+      }
+    }
+  }
+}
+
+.icons-overview {
+  @include media($big-screens) {
+    padding: $spacing-xl;
+    background-color: $color-off;
+    border: 1px solid $color-light;
+  }
+}
