@@ -46,6 +46,7 @@ body { // needed for sticky footer
 
 .page {
   @include flex(1); // needed for sticky footer
+  background-color: $color-off;
 
   @include media($big-screens) {
     @include display(flex);
