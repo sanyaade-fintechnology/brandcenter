@@ -1,0 +1,64 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #5788c6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+
+      .cls-2 {
+        fill: #80addc;
+        opacity: 0.3;
+      }
+
+      path.cls-1, line.cls-1 {
+        stroke-dasharray: 360;
+        stroke-dashoffset: 360;
+        animation: dash 4.5s 0.5s ease-in forwards;
+      }
+
+      circle.cls-1 {
+        animation: fadeIn .4s 3s ease-in backwards;
+      }
+
+      .cls-2 {
+        animation: fadeIn2 .2s .2s ease-in backwards;
+      }
+
+      @keyframes fadeIn {
+        from {opacity: 0 }
+        to {opacity: 1 }
+      }
+
+      @keyframes fadeIn2 {
+        from {opacity: 0 }
+        to {opacity: 0.3 }
+      }
+
+      @keyframes dash {
+        to { stroke-dashoffset: 0 }
+      }
+    </style>
+  </defs>
+  <title>globe</title>
+  <g>
+    <path class="cls-1" d="M32.49,43.33a59.74,59.74,0,1,1-9.18,17"/>
+    <path class="cls-1" d="M124.29,67.25a87,87,0,0,1,1,13.2c0,32.83-18,59.44-40.27,59.44"/>
+    <path class="cls-1" d="M85,21c14.31,0,26.87,11,34,27.61"/>
+    <path class="cls-1" d="M64.22,106.45c4.2,19.81,12.29,33.44,17.81,33.44"/>
+    <path class="cls-1" d="M82,20.07c-7.75,0-20.56,26.82-20.56,59.91q0,3.81.22,7.5"/>
+    <path class="cls-1" d="M82,139.89c7.75,0,20.56-26.82,20.56-59.91S89.78,20.07,82,20.07"/>
+    <path class="cls-1" d="M78.69,21C56.45,21,38.42,47.62,38.42,80.45s18,59.44,40.27,59.44"/>
+    <line class="cls-1" x1="20.02" y1="79.98" x2="140" y2="79.98"/>
+    <path class="cls-1" d="M122,37.17c-9.62,6.07-24.41,10-41,10-17.31,0-32.67-4.23-42.23-10.76"/>
+    <path class="cls-1" d="M122,122.54c-9.62-6.07-24.41-10-41-10-17.31,0-32.67,4.23-42.23,10.76"/>
+    <line class="cls-1" x1="82.03" y1="20.07" x2="82.03" y2="139.18"/>
+    <circle class="cls-1" cx="122.04" cy="57.08" r="6.35" transform="translate(-8.87 25.21) rotate(-11.38)"/>
+    <circle class="cls-1" cx="63.19" cy="97.03" r="6.35" transform="translate(-39.67 150.19) rotate(-84.25)"/>
+    <circle class="cls-1" cx="26.95" cy="51.66" r="6.35" transform="translate(-27.14 73.3) rotate(-84.25)"/>
+    <path class="cls-2" d="M139.57,80.45a59.57,59.57,0,0,1-119.15,0c0-1.38,0-2.76.16-4.12a59.55,59.55,0,0,0,118.82,0C139.53,77.69,139.57,79.07,139.57,80.45Z"/>
+  </g>
+</svg>
