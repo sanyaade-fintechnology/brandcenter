@@ -30,6 +30,7 @@ gulp.task("watch", function () {
   gulp.watch([
     "src/**/*.md",
     "src/**/*.html",
+    "src/**/*.svg",
     "src/**/*.xml",
     "src/**/*.txt",
     "src/**/*.js"
