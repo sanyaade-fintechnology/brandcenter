@@ -14,7 +14,7 @@
 
   @include media($medium-to-big-screens) {
     @include span-columns(4);
-    @include nth-omega(2n);
+    @include omega(2n);
   }
 
   @include media($big-screens) {
