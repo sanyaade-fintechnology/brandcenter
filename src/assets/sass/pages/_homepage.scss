@@ -14,6 +14,10 @@
     @include omega(2n);
   }
 
+  @include media($big-screens) {
+    @include span-columns(3);
+  }
+
   a {
     display: block;
     color: $color-highlight;
