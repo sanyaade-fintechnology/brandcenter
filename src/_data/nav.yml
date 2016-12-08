@@ -2,7 +2,7 @@
   items:
     item1:
       label: Overview
-      url: /
+      url: /brand/
 - name: Design
   items:
     item1:
