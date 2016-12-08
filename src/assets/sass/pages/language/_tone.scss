@@ -1,0 +1,80 @@
+/**
+ * Tone of voice
+ */
+
+.section-header--language-tone .intro {
+  @include media($big-screens) {
+    @include column-count(auto);
+  }
+}
+
+.language-tone-overview {
+  background-color: $color-light;
+  padding: $spacing-m;
+  border-radius: $border-radius;
+
+  @include media($big-screens) {
+    margin-top: $spacing-l;
+  }
+
+  .tone-line {
+    &:not(:last-child) {
+      margin-bottom: $spacing-l;
+      padding-bottom: $spacing-m;
+      border-bottom: 1px solid $color-medium;
+    }
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: $spacing-xs;
+      text-align: center;
+      font-weight: $font-weight-medium;
+      color: $color-highlight;
+      line-height: 1.1;
+
+      @include media($until-medium-screens) { font-size: 3.5vw }
+    }
+  }
+
+  .tone-spectrum {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    font-size: 5vw;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(50% - 2px);
+      height: 2px;
+      background-image: linear-gradient(
+        90deg,
+        rgba($color-medium, 0) 10%,
+        rgba($color-medium, .7),
+        rgba($color-medium, 0) 90%
+      );
+    }
+
+    span {
+      background-color: $color-light;
+      box-shadow: 0 0 10px $color-light;
+      line-height: 1;
+      position: relative;
+      z-index: 10;
+
+      &:first-child { padding-right: $spacing-s }
+      &:nth-child(2) { padding: 0 $spacing-s }
+      &:last-child { padding-left: $spacing-s }
+    }
+
+    @include media($big-screens) { @include type-xl }
+
+    em {
+      font-size: 6vw;
+      @include media($big-screens) { @include type-xxl }
+    }
+  }
+}

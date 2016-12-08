@@ -22,28 +22,7 @@ title: Brand
   </h2>
 </section>
 
-<section id="brand-tone">
-  <h2>Tone</h2>
-
-  <figure class="brand-tone">
-    <ul class="unstyled">
-      {% for line in site.data.brand.tone %}
-      <li class="tone-line">
-        <h4>{{ line.headline }}</h4>
-        <div class="tone-spectrum">
-          <span class="spectrum-begin">{{ line.spectrum.start }}</span>
-          <span class="spectrum-hit" style="position: relative; left: {{ line.offset }}"><em>{{ line.spectrum.hit }}</em></span>
-          <span class="spectrum-end">{{ line.spectrum.end }}</span>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </figure>
-</section>
-
 <section id="brand-identity">
-  <h2>Identity</h2>
-
   <div class="brand-identity__content">
     <article>
       <h3>Innovative</h3>

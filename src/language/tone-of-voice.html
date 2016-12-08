@@ -1,0 +1,29 @@
+---
+layout: default
+title: Tone Of Voice
+---
+
+<header class="section-header section-header--language-tone">
+  <h1>Tone Of Voice</h1>
+
+  <article class="intro">
+    <p>In order to better understand our tone of voice, it helps to see how the words we use to discribe ourselves sit in relation to similar adjectives.</p>
+  </article>
+</header>
+
+<section id="language-tone">
+  <figure class="language-tone-overview">
+    <ul class="unstyled">
+      {% for line in site.data.brand.tone %}
+      <li class="tone-line">
+        <h4>{{ line.headline }}</h4>
+        <div class="tone-spectrum">
+          <span class="spectrum-begin">{{ line.spectrum.start }}</span>
+          <span class="spectrum-hit" style="position: relative; left: {{ line.offset }}"><em>{{ line.spectrum.hit }}</em></span>
+          <span class="spectrum-end">{{ line.spectrum.end }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </figure>
+</section>
