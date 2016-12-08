@@ -14,27 +14,16 @@
   </a>
 
   <nav id="main-nav" class="navigation">
-    <ul class="list">
-      <li>Brand</li>
-      <li><a href="/">Overview</a></li>
-    </ul>
+    {% for group in site.data.nav %}
+      <ul class="list">
+        <li>{{ group.name }}</li>
 
-    <ul class="list">
-      <li>Design</li>
-      <li><a href="/design/logo">Logo</a></li>
-      <li><a href="/design/typography">Typography</a></li>
-      <li><a href="/design/colors">Colors</a></li>
-      <li><a href="/design/imagery">Imagery</a></li>
-    </ul>
-
-    <ul class="list">
-      <li>Language</li>
-      <li><a href="/language/tone-of-voice">Tone Of Voice</a></li>
-    </ul>
-
-    <ul class="list">
-      <li>Resources</li>
-      <li><a href="/downloads">Downloads</a></li>
-    </ul>
+        {% for item in group.items %}
+        <li class="nav-item {% if item[1].url == page.url %}active{% endif %}">
+          <a href="{{ item[1].url }}">{{ item[1].label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
   </nav>
 </header>
