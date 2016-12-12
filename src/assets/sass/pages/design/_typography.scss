@@ -27,9 +27,7 @@
 // Styles
 .specimen-wrap {
   &:not(:last-child) {
-    @include fancy-shadow;
-    background-color: white;
-    padding-bottom: $spacing-xl;
+    margin-bottom: $spacing-xxl;
   }
 }
 
