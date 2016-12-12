@@ -1,44 +1,51 @@
-//-------------------------------------
-// Vendor Dependencies
-//-------------------------------------
+/**
+ * Vendor Dependencies
+ */
+@import "normalize";
 @import "bourbon/bourbon";
-@import "neat/neat-helpers";
-@import "global/_v2_grid_settings";
 @import "neat/neat";
 
+@import "brand-styles/variables";
 
-//-------------------------------------
-// Fonts
-//-------------------------------------
+/**
+ * SumUp global styles
+ */
+@import
+  "brand-styles/typography_mixins",
+  "brand-styles/typography",
+  "brand-styles/animate",
+  "brand-styles/buttons",
+  "brand-styles/components",
+  "brand-styles/elements",
+  "brand-styles/forms",
+  "brand-styles/grid",
+  "brand-styles/hamburger",
+  "brand-styles/tables",
+  "brand-styles/convenience"
+;
 
-@include font-face(museo, "https://static.sumup.com/fonts/western-latin/MuseoSans_300-webfont", 300);
-@include font-face(museo, "https://static.sumup.com//fonts/western-latin/MuseoSans_300_Italic-webfont", 300, italic);
-@include font-face(museo, "https://static.sumup.com//fonts/western-latin/MuseoSans_500-webfont", 500);
-@include font-face(museo-rounded, "https://static.sumup.com//fonts/western-latin/MuseoSansRounded-100-webfont", 100);
-@include font-face(museo-rounded, "https://static.sumup.com//fonts/western-latin/MuseoSansRounded-300-webfont", 300);
-@include font-face(sumup-icons, "https://static.sumup.com//fonts/icons/sumup-icons", 300);
+/**
+ * Sitewide stuff
+ */
+@import
+  "common",
+  "layout",
+  "nav",
+  "footer"
+;
 
 
-//-------------------------------------
-// SumUp global styles
-//-------------------------------------
-@import "global/_v2_colors";
-@import "global/_v2_helpers";
-@import "global/_v2_animate";
-@import "global/_v2_typography";
-@import "global/_v2_elements";
-@import "global/_v2_tables";
-@import "global/_v2_forms";
-@import "global/_v2_buttons";
+/**
+ * Sections
+ */
 
-//-------------------------------------
-// App specific partials
-//-------------------------------------
-
-@import "layout";
-@import "typography";
-@import "welcome";
-@import "logo-usage";
-@import "colors";
-@import "ui";
-@import "download";
+@import
+  "pages/homepage",
+  "pages/brand/overview",
+  "pages/design/logo",
+  "pages/design/colors",
+  "pages/design/typography",
+  "pages/design/imagery",
+  "pages/language/tone",
+  "pages/resources/downloads"
+;
