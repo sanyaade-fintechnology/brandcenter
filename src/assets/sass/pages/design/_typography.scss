@@ -12,6 +12,8 @@
 
   .monospace {
     border-radius: 0 0 $border-radius $border-radius;
+    padding: $spacing-s;
+    line-height: 1;
   }
 }
 
