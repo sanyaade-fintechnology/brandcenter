@@ -107,9 +107,5 @@ body { // needed for sticky footer
       margin-bottom: $spacing-xl;
       border-radius: $border-radius;
     }
-
-    @include media($huge-screens) {
-      margin-left: -$spacing-l;
-    }
   }
 }
