@@ -47,6 +47,8 @@
 
   .swatch__color {
     height: 80px;
+
+    &.has-border { border: 1px solid $color-light }
   }
 
   .swatch__values {

@@ -1,7 +1,7 @@
 <ul class="color-swatches list">
   {% for variant in include.data %}
     <li class="swatch swatch--{{ variant[0] }}">
-      <figure class="swatch__color" style="background-color: {{ variant[1].hex }}"></figure>
+      <figure class="swatch__color {% if include.border %}has-border{% endif %}" style="background-color: {{ variant[1].hex }}"></figure>
       <div class="swatch__values">
         <span class="value value--hex">{{ variant[1].hex }}</span>
         {% if variant[1].rgb %}
