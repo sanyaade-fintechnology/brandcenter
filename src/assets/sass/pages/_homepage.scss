@@ -1,0 +1,34 @@
+/**
+ * Homepage
+ */
+
+.section--quicknav {
+  @include outer-container;
+}
+
+.quicknav__box {
+  text-align: center;
+
+  @include media($until-big-screens) {
+    @include span-columns(4);
+    @include omega(2n);
+  }
+
+  @include media($big-screens) {
+    @include span-columns(3);
+  }
+
+  a {
+    display: block;
+    color: $color-highlight;
+    font-weight: $font-weight-medium;
+    font-family: $font-family-display;
+  }
+
+  svg {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  span { display: block }
+}

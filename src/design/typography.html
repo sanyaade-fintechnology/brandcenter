@@ -1,0 +1,45 @@
+---
+layout: default
+title: Typography
+---
+
+<header class="section-header">
+  <h1>Typography</h1>
+
+  <article class="intro">
+    <p>SumUp's font-face for everything is called <em>Museo Sans</em>.</p>
+    <p>Created by the excellent <a target="_blank" href="http://www.exljbris.com/museosans.html">exljbris Font Foundry</a> in 2008 by <a target="_blank" href="http://www.myfonts.com/person/buivenga/jos/">Jos Buivenga</a> we chose this young type face to represent SumUp throughout our communication. Apart from it's geometric but still humanistic appearance, Museo is a full featured OpenType font with support for many character sets, including i.e. Cyrillic.</p>
+  </article>
+</header>
+
+<section id="type-weights">
+  <h3>Weights</h3>
+
+  <div class="type-weights-wrap">
+    {% for weight in site.data.typography.weights %}
+      <figure class="type-weight">
+        <span class="type-weight__sample {{ weight[0] }}">{{ weight[1] }}</span>
+        <span class="monospace">.{{ weight[0] }}</span>
+      </figure>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="type-specimen">
+  <h3>Headlines</h3>
+
+  <figure class="specimen-wrap">
+    {% include snippets/type-specimen.html data=site.data.typography.display %}
+
+    <figcaption>Text <em>above</em> 18pt uses <em>Museo Sans Display</em>.</figcaption>
+  </figure>
+
+  <h3>Copy text</h3>
+
+  <figure class="specimen-wrap">
+    {% include snippets/type-specimen.html data=site.data.typography.text %}
+
+    <figcaption>Text <em>below</em> 18pt uses <em>Museo Sans</em>.</figcaption>
+  </figure>
+
+</section>

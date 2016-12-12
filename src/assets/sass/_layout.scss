@@ -1,92 +1,111 @@
-//-------------------------------------
-// Layout specific rules
-//-------------------------------------
+/**
+ * General page layout
+ */
 
-.grid-container {
-  @include outer-container;
-  @include pad($gutter);
+$desktopSidebarWidth: 250px;
 
-  &.no-pad {
-    @include pad(0);
-  }
-
-  @include media($breakTabletPortrait) { @include pad($gutter * 2) }
+html {
+  height: 100%; // needed for sticky footer
 }
 
-.content-wrapper > section {
-  margin-bottom: $layoutPagePadding;
-  padding-bottom: $layoutCompPadding * 3;
-  border-bottom: 1px solid $colorLightGrey;
+body { // needed for sticky footer
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100%;
+  background-color: $color-off;
 }
 
-/* Main navigation */
+.page-header,
+.main,
+.footer {
+  padding: $spacing-m;
+  box-sizing: border-box;
 
-.main-header {
-  @include row;
-  padding-top: $gutter/2 !important;
-  padding-bottom: $gutter/2 !important;
-
-  @include media($breakDesktop) {
-    @include animation(fadeInDown .3s .5s ease-in backwards);
-    position: absolute;
-    top: $gutter;
-    left: 50%;
-    margin-left: -512px !important;
-    background-color: white;
-    border-radius: $layoutCornerRadius;
-    width: 100%;
-    box-shadow: 0 2px 0 rgba(darken($colorCorpHighlight, 20%), .3);
+  @include media($big-screens) {
+    padding: $spacing-l;
   }
 }
 
-.logo {
-  background-image: url('/assets/images/logo/sumup_logo_grey.svg');
-  background-size: 154px 40px;
-  background-repeat: no-repeat;
-  width: 154px;
-  height: 40px;
-  text-indent: -999px;
-  display: block;
-  float: left;
+.page-header {
+  @include media($until-big-screens) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include media($big-screens) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 60vh;
+    margin-right: $spacing-l;
+    padding-right: $spacing-l;
+    border-right: 1px solid $color-light;
+    width: $desktopSidebarWidth;
+  }
 }
 
-.main-navigation {
-  float: right;
+.page {
+  @include flex(1); // needed for sticky footer
 
+  @include media($big-screens) {
+    @include display(flex);
 
-  @include media(new-breakpoint(max-width 480px)) { display: none }
-
-  li {
-    float: left;
-    margin-left: 1em;
-
-    a {
+    &:before {
+      // used to push out .main to where it
+      // were without the sidebar being pos: fixed
+      @include flex-shrink(0);
+      content: "";
+      width: $desktopSidebarWidth;
       display: block;
     }
   }
+}
 
-  .button.outline {
-    color: $colorDarkGrey;
-    text-shadow: none;
-    border-color: $colorLightGrey;
+.main {
+  h1:first-of-type { margin-top: -0.1em }
 
-    &:hover {
-      background-color: $colorCorpHighlight;
-      border-color: $colorCorpHighlight;
-      color: $colorOffWhite;
+  @include media($big-screens) {
+    flex-grow: 1;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// sections
+.section-header {
+  .intro {
+    p { margin-top: 0 }
+
+    @include media($big-screens) {
+      @include column-count(2);
     }
   }
 }
 
-//-------------------------------------
-// Footer
-//-------------------------------------
+.section {
+  margin-bottom: $spacing-l;
 
-footer {
-  background-color: $colorDarkGrey;
-  min-height: 100px;
+  @include media($big-screens) { margin-bottom: $spacing-xl * 2 }
 
-  a {
-    color: white;
+  .intro {
+    h3 { margin-top: 0 }
+
+    p {
+      margin-top: 0;
+
+      &:last-child { margin-bottom: 0 }
+    }
+
+    @include media($big-screens) {
+      @include fancy-shadow;
+      max-width: 60%;
+      padding: $spacing-l;
+      background-color: $color-white;
+      border: 1px solid $color-light;
+      margin-bottom: $spacing-xl;
+      border-radius: $border-radius;
+    }
   }
 }

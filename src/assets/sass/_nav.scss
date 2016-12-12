@@ -1,0 +1,58 @@
+/**
+ *
+ * Navigation
+ */
+
+// navigation link-list layout
+.navigation {
+  font-family: $font-family-display;
+
+  .list:not(:last-child) { margin-bottom: $spacing-l }
+
+  li {
+    padding: $spacing-xs 0;
+    line-height: 1;
+  }
+}
+
+// mobile layout
+@include media($until-big-screens) {
+  .hamburger {
+    z-index: 20;
+    position: relative;
+  }
+
+  .navigation {
+    transition: box-shadow .4s .15s, transform .5s;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $spacing-m;
+    background-color: $color-white;
+    transform: translateY(-100%);
+
+    &.showing {
+      box-shadow: 0px 5px 45px rgba($color-dark, .5);
+      transform: translateY(0);
+    }
+
+    li.active {
+      @include rounded-left-border($spacing-m, $color-brand);
+    }
+  }
+}
+
+// desktop layout
+@include media($big-screens) {
+  .hamburger { display: none }
+
+  .navigation {
+    margin-top: $spacing-xxl;
+
+    li.active {
+      @include rounded-left-border($spacing-l, $color-brand);
+    }
+  }
+}

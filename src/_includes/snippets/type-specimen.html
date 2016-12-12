@@ -1,0 +1,9 @@
+{% for spec in include.data %}
+<p class="{{ spec[0] }} specimen">
+  <span class="specimen__sample-text">{{ spec[1].text }}</span>
+  <span class="specimen__spec">
+    <span>{{ spec[1].spec }}</span>
+    <span><span class="monospace">.{{ spec[0] }}</span></span>
+  </span>
+</p>
+{% endfor %}

@@ -1,0 +1,29 @@
+<header class="page-header">
+  <a href="/" class="logo" alt="{{ site.name }}">
+    <svg class="svg-logo">
+      <use xlink:href="#logo" />
+    </svg>
+  </a>
+
+  <a href="#" id="toggle-menu" class="nav-wrap__toggle">
+    <div class="hamburger hamburger--close">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+  </a>
+
+  <nav id="main-nav" class="navigation">
+    {% for group in site.data.nav %}
+      <ul class="list">
+        <li>{{ group.name }}</li>
+
+        {% for item in group.items %}
+        <li class="nav-item {% if item[1].url == page.url %}active{% endif %}">
+          <a href="{{ item[1].url }}">{{ item[1].label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </nav>
+</header>

@@ -1,0 +1,31 @@
+tone:
+  - offset: -5%
+    headline: "The overall tone of our communication is:"
+    spectrum:
+      start: Formal
+      hit: Relaxed
+      end: Casual
+  - offset: 0
+    headline: "We'd also like to come accross as:"
+    spectrum:
+      start: Serious
+      hit: Light-hearted
+      end: Silly
+  - offset: 12%
+    headline: "When we talk about ourselves and our work we are:"
+    spectrum:
+      start: Humble
+      hit: Proud
+      end: Arrogant
+  - offset: -14%
+    headline: "When we provide technical instructions we are:"
+    spectrum:
+      start: Bossy
+      hit: Expert
+      end: Idle
+  - offset: 5%
+    headline: "When we see that someone might need a hand we are:"
+    spectrum:
+      start: Unobliging
+      hit: Helpful
+      end: Overbearing

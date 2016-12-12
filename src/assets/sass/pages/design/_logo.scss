@@ -1,0 +1,119 @@
+/**
+ * Logo usage
+ */
+
+figure.logo-usage {
+  margin-bottom: $spacing-m;
+
+  &.light .fake-hero {
+    background-color: $color-light;
+    fill: $color-dark;
+  }
+
+  &.brand .fake-hero {
+    background-color: $color-brand;
+    fill: $color-light;
+  }
+
+  &.dark .fake-hero {
+    background-color: $color-dark;
+    fill: $color-light;
+  }
+
+  .svg-logo {
+    width: 150px;
+    height: 40px;
+    margin-bottom: $spacing-m;
+    display: block;
+  }
+}
+
+.fake-hero {
+  padding: $spacing-m;
+  border-radius: $border-radius;
+
+  .fake-paragraphs {
+    p {
+      text-indent: -9999px;
+      width: 50%;
+      background-color: rgba($color-medium, .5);
+      line-height: 1em;
+      border-radius: 1px;
+
+      &:first-child { width: 65% }
+      &:last-child { width: 55%; margin-bottom: 0 }
+    }
+  }
+
+  .fake-button {
+    display: inline-block;
+    margin-top: $spacing-m;
+    text-indent: -9999px;
+    min-width: 100px;
+  }
+}
+
+@include media($huge-screens) {
+  .logo-usage-examples {
+    display: flex;
+  }
+
+  .logo-usage {
+    @include flex-grow(1);
+
+    &:first-of-type { padding-right: $spacing-m }
+    &:last-of-type { padding-left: $spacing-m }
+  }
+}
+
+
+/**
+ * Logos for social media
+ */
+.logos-in-boxes {
+  @include media($until-big-screens) {
+    figure { margin-bottom: $spacing-xl }
+  }
+
+  @include media($medium-to-big-screens) {
+    @include display(flex);
+    @include flex-wrap(wrap);
+
+    figure {
+      @include flex-basis(calc(50% - #{$spacing-xs}));
+
+      &:nth-child(2n-1) { margin-right: $spacing-xs }
+      &:nth-child(2n) { margin-left: $spacing-xs }
+    }
+  }
+
+  @include media($big-screens) {
+    @include display(flex);
+    @include align-items(center);
+
+    figure:not(:last-child) {
+      margin-right: $spacing-xl;
+    }
+  }
+
+
+  .logo-wrap {
+    background-color: $color-light;
+    border: 1px solid $color-medium;
+
+    &.rounded-square { border-radius: 10px }
+    &.circle { border-radius: 100% }
+
+    &.result {
+      background-color: $color-off;
+      margin: $spacing-xxl;
+      box-sizing: border-box;
+      box-shadow: 0 2px 20px rgba($color-dark, .2);
+      border-radius: $border-radius;
+    }
+  }
+
+  .logo-social-dummy {
+    background-color: $color-highlight;
+  }
+}

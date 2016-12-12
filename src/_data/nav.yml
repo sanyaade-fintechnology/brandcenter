@@ -1,0 +1,29 @@
+- name: Brand
+  items:
+    item1:
+      label: Overview
+      url: /brand/
+- name: Design
+  items:
+    item1:
+      label: Logo
+      url: /design/logo/
+    item2:
+      label: Typography
+      url: /design/typography/
+    item3:
+      label: Colors
+      url: /design/colors/
+    item4:
+      label: Imagery
+      url: /design/imagery/
+- name: Language
+  items:
+    item1:
+      label: Tone Of Voice
+      url: /language/tone-of-voice/
+- name: Resources
+  items:
+    item1:
+      label: Downloads
+      url: /resources/downloads/

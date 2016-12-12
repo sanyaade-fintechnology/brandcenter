@@ -1,51 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>SumUp Brand Center | {{ page.title }}</title>
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/assets/css/normalize.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SumUp Brand Center | {{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
 
-  <div class="page">
-    <header class="main-header grid-container">
-      <a href="/" class="logo">{{ site.name }}</a>
+  <body>
+    {% include icons.html %}
 
-      <nav class="main-navigation">
-        <ul class="unstyled">
-          <li><a class="button outline small" href="https://sumup.com">Product</a></li>
-          <li><a class="button outline small" href="http://support.sumup.com">Support</a></li>
-          <li><a class="button outline small" href="https://sumup.co.uk/press">Press</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="page">
+      {% include header.html %}
 
-    <div class="main">
-      {{ content }}
+      <div class="main">
+        {{ content }}
+      </div>
     </div>
-  </div>
 
-  <footer class="footer">
-    <div class="grid-container">
-      <ul class="unstyled">
-        <li>
-          <a href="http://sumup.co.uk/about-us">About SumUp</a>
-        </li>
-        <li>
-          <a href="http://sumup.co.uk/press">Contact</a>
-        </li>
-        <li>
-          <a href="http://sumup.co.uk/imprint">Imprint</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+    {% include footer.html %}
 
-  <!-- build:js(app) /js/scripts.js -->
-  <script src="/js/main.js"></script>
-  <!-- endbuild -->
-</body>
+    <script src="/assets/js/helpers.js" charset="utf-8"></script>
+    <script src="/assets/js/brandbook.js" charset="utf-8"></script>
+  </body>
 </html>

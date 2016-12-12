@@ -1,0 +1,59 @@
+// Weights
+.type-weights-wrap {
+  @include display(flex);
+}
+
+.type-weight {
+  @include fancy-shadow;
+  text-align: center;
+  margin-right: $spacing-l;
+
+  span { display: block }
+
+  .monospace {
+    border-radius: 0 0 $border-radius $border-radius;
+    padding: $spacing-s;
+    line-height: 1;
+  }
+}
+
+.type-weight__sample {
+  @include type-xxxl;
+  display: block;
+  padding: $spacing-l;
+  border: 1px solid $color-light;
+  border-bottom: none;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+// Styles
+.specimen-wrap {
+  &:not(:last-child) {
+    margin-bottom: $spacing-xxl;
+  }
+}
+
+.specimen {
+  @include media($big-screens) {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+}
+
+.specimen__spec {
+  @include type-m;
+  color: $color-brand;
+
+  @include media($until-big-screens) {
+    display: block;
+  }
+
+  & > span { display: block }
+}
+
+.specimen__sample-text {
+  border: 1px solid $color-highlight-lighter;
+  background-color: rgba($color-highlight-lighter, .1);
+  border-radius: $border-radius;
+}

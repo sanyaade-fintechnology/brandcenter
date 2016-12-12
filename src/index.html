@@ -1,174 +1,48 @@
 ---
 layout: default
-title: Welcome!
+title: Welcome
 ---
 
-<div class="welcome">
-  <div class="welcome-text grid-container">
-    <h1>Brand Center</h1>
+<header class="section-header">
+  <h1>Welcome to the SumUp brand book</h1>
 
-    <p>Welcome to the SumUp Brand Center.</p>
-    <p>This place serves as a center for resources and general information about SumUp as an evolving brand.</p>
-  </div>
-</div>
-<!-- end welcome -->
+  <article class="intro">
+    <p>SumUp is a leading financial technology company that is set to become the first ever global card acceptance brand. The company enables businesses to accept card payments at the Point-of-Sale or on the go in a simple, secure and cost-effective way.</p>
 
-<div id="styleguide" class="grid-container content-wrapper">
-  <section class="logo-guidelines">
-    <h2>The SumUp Logo</h2>
+    <p>SumUp is the only company to offer an end-to-end EMV card acceptance solution built on proprietary hardware and mobile apps. This unique offering enabled SumUp to rapidly expand into 15 markets, including the U.S., Brazil and Germany, making it the mPOS company with the largest global footprint.</p>
 
-    <article class="correct-usage">
-      <h3>Correct usage</h3>
-      <p>There are two different color combinations to use the SumUp Logo:</p>
+    <p>The company has gone on to develop a full suite of SDKs and APIs for third parties to integrate card payments into their mobile apps.</p>
 
-      <div class="logo-usages">
-        <div class="figure-wrap">
-          <figure class="logo-on-white">
-            <img src="/assets/images/logo/sumup_logo_grey.svg" alt="Dark Grey SumUp Logo">
-          </figure>
-          <figcaption>Dark Grey on White/Offwhite</figcaption>
-        </div>
+    <p>SumUp has been backed by renowned investors, including Groupon, BBVA Ventures, Holtzbrinck Ventures and American Express. In April 2016 SumUp has merged with the mPOS company payleven to create the global leader in mobile payment.</p>
+  </article>
+</header>
 
-        <div class="figure-wrap">
-          <figure class="logo-on-blue">
-            <img src="/assets/images/logo/sumup_logo_offwhite.svg" alt="Offwhite SumUp Logo">
-          </figure>
-          <figcaption>Offwhite on Highlight Blue</figcaption>
-        </div>
-      </div>
-    </article>
+<section class="section section--quicknav">
+  <nav class="quicknav__box">
+    <a href="{{ site.data.nav[0].items.item1.url }}">
+      <svg class="icon"><use xlink:href="#icon-globe" /></svg>
+      <span>{{ site.data.nav[0].name }}</span>
+    </a>
+  </nav>
 
-    <article class="incorrect-usage">
-      <h3><span class="incorrect">Incorrect usage</span></h3>
+  <nav class="quicknav__box">
+    <a href="{{ site.data.nav[1].items.item1.url }}">
+      <svg class="icon"><use xlink:href="#icon-bulp" /></svg>
+      <span>{{ site.data.nav[1].name }}</span>
+    </a>
+  </nav>
 
-      <div class="logo-usages">
-        <div class="figure-wrap">
-          <figure class="legacy-logo incorrect">
-            <img src="/assets/images/logo/sumup_logo_OLD.svg" alt="Old SumUp Logo - not be used any more">
-          </figure>
-          <figcaption class="incorrect">Old style logo – <strong>Do not use anymore</strong></figcaption>
-        </div>
-      </div>
-    </article>
-  </section>
-  <!-- end logo guidelines -->
+  <nav class="quicknav__box">
+    <a href="{{ site.data.nav[2].items.item1.url }}">
+      <svg class="icon"><use xlink:href="#icon-megaphone" /></svg>
+      <span>{{ site.data.nav[2].name }}</span>
+    </a>
+  </nav>
 
-  <section class="color-guidelines">
-    <h2>Colors</h2>
-
-    <p><a href="https://static.sumup.com/downloads/SumUp-Colors-Sketch.sketchpalette.zip" class="button small">Download Sketch Color Palette</a></p>
-
-    <article class="color-group primary-colors">
-      <h3>Primary Colors</h3>
-      <ul class="unstyled color-tiles">
-        {% for color in site.data.colors-primary %}
-          <li class="primary-color {{ color.handle }}">
-            <header>
-              <h4>{{ color.name }}</h4>
-
-              <article class="desc">
-                <small>{{ color.desc }}</small>
-              </article>
-            </header>
-
-            <figure class="example">
-              {{ color.example }}
-              <ul class="unstyled color-values">
-                {% for value in color.values %}
-                  <li>
-                    <span class="label">{{ value[0] }}</span>
-                    <span class="value">{{ value[1] }}</span>
-                  </li>
-                {% endfor %}
-              </ul>
-            </figure>
-          </li>
-        {% endfor %}
-      </ul>
-    </article>
-
-    <article class="color-group feedback-colors">
-      <h3>Feedback Colors</h3>
-      <p>These colors are indended to be used with elements that provide feedback to the user. <br>
-        For example notifications, succesful transactions screens or icons in the sales history.</p>
-      <ul class="unstyled color-tiles">
-        {% for color in site.data.colors-feedback %}
-          <li class="feedback-color {{ color.handle }}">
-            <h4>{{ color.name }}</h4>
-
-            {% for example in color.examples %}
-              <figure class="example {{ example[0] }}">
-                <div class="example-content" style="background-color: {{ example[1].Hex }}"></div>
-                <ul class="unstyled color-values">
-                  {% for value in example[1] %}
-                    <li>
-                      <span class="label">{{ value[0] }}</span>
-                      <span class="value">{{ value[1] }}</span>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </figure>
-            {% endfor %}
-          </li>
-        {% endfor %}
-      </ul>
-    </article>
-  </section>
-
-  <!-- end color guidelines -->
-  <section class="ui-guidelines">
-    <h3>User interface</h3>
-    <ul class="buttons">
-      <li>
-        <h4>Medium buttons (default)</h4>
-        <ul>
-          <li><a href="#" title="" class="button">Button</a></li>
-          <li><a href="#" title="" class="outline button">Outline button</a></li>
-          <li><a href="#" title="" class="blue outline button">Blue outline button</a></li>
-          <li><a href="#" title="" class="call-to-action button">Call-to-action button</a></li>
-          <li><a href="#" title="" class="grey button">Grey button</a></li>
-          <li><a href="#" title="" class="dark button">Dark button</a></li>
-          <li><a href="#" title="" class="green button">Green button</a></li>
-          <li><a href="#" title="" class="disabled button">Disabled button</a></li>
-        </ul>
-      </li>
-      <li>
-        <h4>Small buttons</h4>
-        <ul>
-          <li><a href="#" title="" class="small button">Button</a></li>
-          <li><a href="#" title="" class="small outline button">Outline button</a></li>
-          <li><a href="#" title="" class="small blue outline button">Blue outline button</a></li>
-          <li><a href="#" title="" class="small call-to-action button">Call-to-action button</a></li>
-          <li><a href="#" title="" class="small grey button">Grey button</a></li>
-          <li><a href="#" title="" class="small dark button">Dark button</a></li>
-          <li><a href="#" title="" class="small green button">Green button</a></li>
-          <li><a href="#" title="" class="disabled small button">Disabled button</a></li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <section class="downloads">
-    <h2>Downloads</h2>
-
-    <section class="download">
-      <ul class="unstyled download-list">
-        <li>
-          <h4>Logos for print</h4>
-          <p>Logo pack in CMYK for printing, both in vector and raster formats.</p>
-          <a href="https://static.sumup.com/downloads/sumup-logo-print.zip" class="small button">Download</a>
-        </li>
-        <li>
-          <h4>Logos for web</h4>
-          <p>Logo pack in RGB for the web, both in vector and raster formats.</p>
-          <a href="https://static.sumup.com/downloads/sumup-logo-web.zip" class="small button">Download</a>
-        </li>
-        <li class="disabled">
-          <h4>Slides</h4>
-          <p>Powerpoint template.</p>
-          <a href="https://static.sumup.com/downloads/sumup-powerpoint-template.zip" class="small button">Download</a>
-        </li>
-      </ul>
-    </section>
-  </section>
-</div>
+  <nav class="quicknav__box">
+    <a href="{{ site.data.nav[3].items.item1.url }}">
+      <svg class="icon"><use xlink:href="#icon-folder" /></svg>
+      <span>{{ site.data.nav[3].name }}</span>
+    </a>
+  </nav>
+</section>

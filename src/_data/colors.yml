@@ -1,0 +1,45 @@
+primary:
+  brand:
+    lighter:
+      hex: '#8EB6ED'
+      rgb: '142, 182, 237'
+    main:
+      hex: '#5C8BCC'
+      rgb: '92, 139, 204'
+    darker:
+      hex: '#416494'
+      rgb: '65, 100, 148'
+  highlight:
+    lighter:
+      hex: '#95E6CD'
+      rgb: '149, 230, 205'
+    main:
+      hex: '#52CCA7'
+      rgb: '82, 204, 167'
+    darker:
+      hex: '#41A386'
+      rgb: '65, 163, 134'
+attention:
+  danger:
+    normal:
+      hex: '#CC5252'
+    darker:
+      hex: '#732e2d'
+  warning:
+    normal:
+      hex: '#F0CC60'
+    darker:
+      hex: '#99823D'
+greys:
+  dark:
+    normal:
+      hex: '#323E4D'
+  medium:
+    normal:
+      hex: '#CED2D9'
+  light:
+    normal:
+      hex: '#F0F2F5'
+  offwhite:
+    normal:
+      hex: '#FAFBFC'

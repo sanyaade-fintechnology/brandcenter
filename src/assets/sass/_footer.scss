@@ -1,0 +1,18 @@
+/**
+ *
+ * Footer stuff
+ */
+
+
+.footer {
+  background-color: $color-dark;
+  color: white;
+  padding-bottom: $spacing-l;
+}
+
+.footer__links {
+  a {
+    display: inline-block;
+    margin-right: $spacing-m;
+  }
+}

@@ -30,6 +30,7 @@ gulp.task("watch", function () {
   gulp.watch([
     "src/**/*.md",
     "src/**/*.html",
+    "src/**/*.svg",
     "src/**/*.xml",
     "src/**/*.txt",
     "src/**/*.js"
@@ -59,7 +60,9 @@ gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
 gulp.task("styles", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
   return gulp.src("src/assets/sass/main.scss")
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: require('node-normalize-scss').includePaths
+    }))
     .on('error', errorHandler)
     .on("error", notify.onError())
     .pipe(gulp.dest("src/assets/css/"))
