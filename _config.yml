@@ -7,6 +7,3 @@ destination: dev
 
 # Turns 'brand.html' into /brand \o/
 permalink: pretty
-
-# baseurl for github link
-baseurl: /brandcenter
