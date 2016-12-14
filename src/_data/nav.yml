@@ -22,6 +22,9 @@
     item1:
       label: Tone Of Voice
       url: /language/tone-of-voice/
+    item2:
+      label: Communication
+      url: /language/communication/
 - name: Resources
   items:
     item1:

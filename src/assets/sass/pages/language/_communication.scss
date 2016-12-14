@@ -1,0 +1,9 @@
+/**
+ * Communication
+ */
+
+.section-header--language-tone .intro {
+  @include media($big-screens) {
+    @include column-count(auto);
+  }
+}
