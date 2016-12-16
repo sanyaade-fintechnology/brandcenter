@@ -33,7 +33,9 @@ gulp.task("watch", function () {
     "src/**/*.svg",
     "src/**/*.xml",
     "src/**/*.txt",
-    "src/**/*.js"
+    "src/**/*.js",
+    "src/**/*.jpg",
+    "src/**/*.png"
   ], ["jekyll-rebuild"]);
 
   gulp.watch(["src/assets/sass/**/*.scss"], ["styles"]);

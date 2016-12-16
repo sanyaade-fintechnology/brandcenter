@@ -45,6 +45,10 @@
     background-image: url(/assets/images/content/downloads/download-preview-photos.jpg);
   }
 
+  &.download-box--fonts .box__preview {
+    background-image: url(/assets/images/content/downloads/download-preview-fonts.jpg);
+  }
+
   .box__label {
     border: 1px solid $color-light;
     border-top: none;

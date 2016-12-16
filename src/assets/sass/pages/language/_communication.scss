@@ -1,0 +1,9 @@
+/**
+ * Communication
+ */
+
+.section-header--communication .intro {
+  @include media($big-screens) {
+    @include column-count(1);
+  }
+}
