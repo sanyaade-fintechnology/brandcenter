@@ -2,8 +2,8 @@
  * Communication
  */
 
-.section-header--language-tone .intro {
+.section-header--communication .intro {
   @include media($big-screens) {
-    @include column-count(auto);
+    @include column-count(1);
   }
 }
