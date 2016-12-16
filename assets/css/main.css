@@ -1335,22 +1335,23 @@ body {
     .footer {
       padding: 24px; } }
 
-@media screen and (max-width: 800px) {
-  .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; } }
-
-@media screen and (min-width: 801px) {
-  .page-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 60vh;
-    margin-right: 24px;
-    padding-right: 24px;
-    border-right: 1px solid #F0F2F5;
-    width: 250px; } }
+.page-header {
+  z-index: 0; }
+  @media screen and (max-width: 800px) {
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
+  @media screen and (min-width: 801px) {
+    .page-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      margin-right: 24px;
+      padding-right: 24px;
+      border-right: 1px solid #F0F2F5;
+      width: 250px; } }
 
 .page {
   -webkit-box-flex: 1;
@@ -1493,7 +1494,8 @@ body {
 .footer {
   background-color: #323E4D;
   color: white;
-  padding-bottom: 24px; }
+  padding-bottom: 24px;
+  z-index: 1; }
 
 .footer__links a {
   display: inline-block;
@@ -1997,6 +1999,15 @@ figure.logo-usage {
           line-height: 48px;
           font-family: museoRounded, Helvetica, Arial, sans-serif; } }
 
+/**
+ * Communication
+ */
+@media screen and (min-width: 801px) {
+  .section-header--communication .intro {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1; } }
+
 .section--downloads {
   max-width: 1000px;
   margin-left: auto;
@@ -2053,6 +2064,8 @@ figure.logo-usage {
     background-image: url(/assets/images/content/downloads/download-preview-slides.png); }
   .download-box.download-box--photos .box__preview {
     background-image: url(/assets/images/content/downloads/download-preview-photos.jpg); }
+  .download-box.download-box--fonts .box__preview {
+    background-image: url(/assets/images/content/downloads/download-preview-fonts.jpg); }
   .download-box .box__label {
     border: 1px solid #F0F2F5;
     border-top: none;
