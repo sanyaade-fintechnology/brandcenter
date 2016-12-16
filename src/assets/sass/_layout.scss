@@ -27,6 +27,7 @@ body { // needed for sticky footer
 }
 
 .page-header {
+  z-index: 0;
   @include media($until-big-screens) {
     display: flex;
     justify-content: space-between;
@@ -37,7 +38,7 @@ body { // needed for sticky footer
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 60vh;
+    min-height: 100%;
     margin-right: $spacing-l;
     padding-right: $spacing-l;
     border-right: 1px solid $color-light;
