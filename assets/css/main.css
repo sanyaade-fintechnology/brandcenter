@@ -1448,7 +1448,7 @@ body {
   .navigation {
     transition: box-shadow .4s .15s, transform .5s;
     position: absolute;
-    z-index: 10;
+    z-index: 15;
     top: 0;
     left: 0;
     right: 0;
